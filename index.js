@@ -11,9 +11,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'views', 'images')));
-app.use(express.static(path.join(__dirname, 'views', 'css')));
-app.use(express.static(path.join(__dirname, 'views', 'js')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Define your routes
 app.get('/', (req, res) => {
