@@ -1,17 +1,19 @@
 {
   "name": "bingo",
   "version": "1.0.0",
-  "description": "bingo free business template",
+  "description": "Reaching out to help others",
   "author": "Themefisher",
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "start": "node index.js"
   },
   "dependencies": {
     "browser-sync": "^2.23.7",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-file-include": "^0.10.0",
@@ -19,7 +21,9 @@
     "gulp-rimraf": "^1.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
+    "knex": "^3.1.0",
     "node": "^21.2.0",
+    "pg": "^8.11.3",
     "sass": "^1.52.3"
   }
 }

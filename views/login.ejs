@@ -8,8 +8,153 @@
  <link rel="stylesheet" href="./css/login.css">
  <script src="./js/login.js"></script>
  <link rel="shortcut icon" type="image/x-icon" href="https://i.pinimg.com/564x/94/56/53/945653c6640163ed19c061b4f9c51292.jpg"/>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
 <body>
+  <% if (loggedIn == 'true') 
+  { %>
+
+    
+    <div class="cotn_principal">
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 80px;">
+        <div class="content-wrapper full-page-wrapper d-flex">
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
+                <h3 class="card-title text-left mb-3" style="color: black; padding-bottom: 5%; " >You are already logged in!</h3>
+                <h4 class="card-title text-left mb-3" style="color: black;">Would you like to log out?</h4>
+                <form action="/logout" method="post">          
+                  <div class="text-center" >
+                    <button type="submit" class="btn btn-primary btn-block enter-btn">Logout</button>
+                  </div>
+                </form>
+                  <form action="/report" method="get">
+                  <div class="text-center" >
+                    <button type="submit" class="btn btn-primary btn-block enter-btn">Return to Report</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- row ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+  <% }
+  else if (loggedIn == 'username')
+  { %>
+    <div class="cotn_principal">
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 80px;">
+        <div class="content-wrapper full-page-wrapper d-flex">
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
+                <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
+                <form action="/login" method="post">
+                  <div class="form-group">
+                    <label>Username *</label>
+                    <input required autofocus type="text" class="form-control p_input" id="username" name="username">
+                  </div>
+                  <p class="text-danger"><small>*Incorrect Username</small></p>
+                  <div class="form-group">
+                    <label>Password *</label>
+                    <input required type="password" class="form-control p_input" name="password" id="password">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- row ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+  <% }
+  else if (loggedIn == 'password')
+  { %>
+    <div class="cotn_principal">
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 80px;">
+        <div class="content-wrapper full-page-wrapper d-flex">
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
+                <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
+                <form action="/login" method="post">
+                  <div class="form-group">
+                    <label>Username *</label>
+                    <input required autofocus type="text" class="form-control p_input" id="username" name="username">
+                  </div>
+                  <div class="form-group">
+                    <label>Password *</label>
+                    <input required type="password" class="form-control p_input" name="password" id="password">
+                  </div>
+                  <p class="text-danger"><small>*Incorrect Password</small></p>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- row ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+  <% }
+  
+  else 
+  {%>
+   <div class="cotn_principal">
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 370px;">
+        <div class="content-wrapper full-page-wrapper d-flex">
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
+              <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
+              <form action="/login" method="post">
+                <div class="form-group">
+                  <label>Username *</label>
+                  <input required autofocus type="text" class="form-control p_input" id="username" name="username">
+                </div>
+                <div class="form-group">
+                  <label>Password *</label>
+                  <input required type="password" class="form-control p_input" name="password" id="password">
+                </div>
+              
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+    <% }
+%>
+<!-- plugins:js -->
+<script src="/vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="/js/off-canvas.js"></script> 
+<script src="/js/hoverable-collapse.js"></script> 
+<script src="/js/misc.js"></script> 
+<script src="/js/settings.js"></script> 
+<script src="/js/todolist.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="/js/triggerGets.js"></script>
+<!-- endinject -->
+</body>
+</html>
+
+<!-- old version
  <div class="cotn_principal">
    <div class="cont_centrar">
      <div class="cont_login">
@@ -71,5 +216,4 @@
     
    </div>
  </div>
-</body>
-</html>
+ -->
