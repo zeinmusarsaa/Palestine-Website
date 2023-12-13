@@ -136,29 +136,29 @@ Fixed Navigation
 						   <div class="border"></div>
                            <form id="contact-form" method="post" role="form">
 							<div class="form-group mb-4">
-								<input type="text" placeholder="Your First Name" class="form-control" name="firstName" id="firstName" value="<%= request[0].firstName %>" required>
+								<input type="text" placeholder="Your First Name" class="form-control" name="firstName" id="firstName" value="<%= Request[0].firstName %>" required>
 							</div>
 
 							<div class="form-group mb-4">
-								<input type="text" placeholder="Your Last Name" class="form-control" name="lastName" id="lastName" value="<%= request[0].lastName %>" required>
+								<input type="text" placeholder="Your Last Name" class="form-control" name="lastName" id="lastName" value="<%= Request[0].lastName %>" required>
 							</div>
 
 							<div class="form-group mb-4">
-								<input type="text" placeholder="Your City" class="form-control" name="city" id="city" value="<%= request[0].city %>"required>
+								<input type="text" placeholder="Your City" class="form-control" name="city" id="city" value="<%= Request[0].city %>"required>
 							</div>
 
 							<div class="form-group mb-4">
-								<input type="text" placeholder="Your Phone Number" class="form-control" name="phoneNumber" id="phoneNumber" value="<%= request[0].phoneNumber %>" required>
+								<input type="text" placeholder="Your Phone Number" class="form-control" name="phoneNumber" id="phoneNumber" value="<%= Request[0].phoneNumber %>" required>
 							</div>
 							
 							<div class="form-group mb-4">
 								<label for="aidType">Type of Aid Needed:</label>
 								<select name="aidType" required>
-									<option value="water" <% if (requests[0].aidType === "water") {selected} %>>Water</option>
-									<option value="food" <% if (requests[0].aidType === "food") {selected} %>>Food</option>
-									<option value="medicalSupplies" <% if (requests[0].aidType === "medicalSupplies") {selected} %>>Medical Supplies</option>
-									<option value="phoneSims" <% if (requests[0].aidType === "phoneSims") {selected} %>>Phone SIMs</option>
-									<option value="shelter" <% if (requests[0].aidType === "shelter") {selected} %>>Shelter</option>
+									<option value="water" <% if (Request[0].aidType === "water") { %>selected<% } %>>Water</option>
+									<option value="food" <% if (Request[0].aidType === "food") { %>selected<% } %>>Food</option>
+									<option value="medicalSupplies" <% if (Request[0].aidType === "medicalSupplies") { %>selected<% } %>>Medical Supplies</option>
+									<option value="phoneSims" <% if (Request[0].aidType === "phoneSims") { %>selected<% } %>>Phone SIMs</option>
+									<option value="shelter" <% if (Request[0].aidType === "shelter") { %>selected<% } %>>Shelter</option>
 								</select>
 							</div>
 

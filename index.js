@@ -27,7 +27,7 @@ const knex = require('knex')({
     connection: {
         host: process.env.RDS_HOSTNAME || 'localhost',
         user: process.env.RDS_USERNAME || 'postgres',
-        password: process.env.RDS_PASSWORD || 'hi from11',
+        password: process.env.RDS_PASSWORD || 'Hola123!',
         database: process.env.RDS_DB_NAME || 'ebdbLocal',
         port: process.env.RDS_PORT || 5432,
         ssl: process.env.DB_SSL ? {rejectUnauthorized: false} : false
@@ -74,9 +74,10 @@ app.get('/seeRequests', (req, res) => {
 app.get('/editReq/:id', (req, res) => {
   let loggedIn = req.session.loggedIn || 'false';
   let edit = 'true';
-  let formId = req.params.formId;
-  knex.select('formId', 'firstName', 'lastName', 'city', 'phone', 'aidType').from('requests').where('formId', formId).then(form => {
-    res.render('editReq', {request : form, loggedIn: loggedIn, edit: edit});
+  let formId = req.params.id;
+  console.log("formId: " + formId);
+  knex.select('formId', 'firstName', 'lastName', 'city', 'phone', 'aidType').from('Requests').where('formId', formId).then(form => {
+    res.render('editReq', {Request : form, loggedIn: loggedIn, edit: edit});
   }).catch(err => {
     console.log(err);
     res.status(500).json({err});
