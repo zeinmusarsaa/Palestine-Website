@@ -40,8 +40,6 @@
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
 
 </head>
 <body id="body">
@@ -84,21 +82,24 @@ Fixed Navigation
   
 		<div class="collapse navbar-collapse" id="navigation">
 		  <ul class="navbar-nav ml-auto text-center">
-			<li class = "nav-item">
-			  <a class="nav-link" href ="/">Homepage</a>
+			<li class = "nav-item" id="home">
+			  <a class="nav-link" href="#">Homepage</a>
 			</li>
-			<li class="nav-item ">
-				<a class="nav-link" href="/about">About Us</a>
-			  </li>
-			  <li class="nav-item ">
-				<a class="nav-link" href="/palestine">Palestine</a>
-			  </li>
-			  <li class="nav-item ">
-				<a class="nav-link" href="/support">Support</a>
-			  </li>
-			  <li class="nav-item" id="logout">
+			<li class="nav-item" id="about">
+				<a class="nav-link" href="#">About Us</a>
+			</li>
+			<li class="nav-item" id="palestine">
+				<a class="nav-link" href="#">Palestine</a>
+			</li>
+			<li class="nav-item" id="support">
+				<a class="nav-link"  href="#">Support</a>
+			</li>
+			<li class="nav-item" id="login">
+				<a class="nav-link"  href="#">Login</a>
+			</li>
+			<li class="nav-item" id="logout">
 				<a class="nav-link" id="logout-link" href="#">Logout</a>
-			  </li>
+			</li>
 		  </ul>
 		</div>
 	  </nav>
@@ -109,72 +110,6 @@ Fixed Navigation
   End Fixed Navigation
   ==================================== -->
   
-
-<section class="single-page-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Show Support!</h2>
-				<ol class="breadcrumb header-bradcrumb justify-content-center">
-					<li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Show Support</li>
-				</ol>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Start Portfolio Section
-		=========================================== -->
-
-		<section class="contact-us" id="contact">
-			<div class="container">
-				<div class="row justify-content-center">
-					<!-- section title -->
-					<div class="col-xl-6 col-lg-8">
-					   <div class="title text-center">
-
-						<h2>Edit an Existing Request</h2>
-						<div class="border"></div>
-                           <form id="contact-form" action="/saveEdits/<%= Request[0].formId %>" method="post" role="form">
-								<div class="form-group mb-4">
-									<input type="text" placeholder="Your First Name" class="form-control" name="firstName" id="firstName" value="<%= Request[0].firstName %>" required>
-								</div>
-
-								<div class="form-group mb-4">
-									<input type="text" placeholder="Your Last Name" class="form-control" name="lastName" id="lastName" value="<%= Request[0].lastName %>" required>
-								</div>
-
-								<div class="form-group mb-4">
-									<input type="text" placeholder="Your City" class="form-control" name="city" id="city" value="<%= Request[0].city %>"required>
-								</div>
-
-								<div class="form-group mb-4">
-									<input type="text" placeholder="Your Phone Number" class="form-control" name="phone" id="phone=" value="<%= Request[0].phone %>" required>
-								</div>
-								
-								<div class="form-group mb-4">
-									<label for="aidType">Type of Aid Needed:</label>
-									<select name="aidType" required>
-										<option value="water" <% if (Request[0].aidType === "water") { %>selected<% } %>>Water</option>
-										<option value="food" <% if (Request[0].aidType === "food") { %>selected<% } %>>Food</option>
-										<option value="medicalSupplies" <% if (Request[0].aidType === "medicalSupplies") { %>selected<% } %>>Medical Supplies</option>
-										<option value="phoneSims" <% if (Request[0].aidType === "phoneSims") { %>selected<% } %>>Phone SIMs</option>
-										<option value="shelter" <% if (Request[0].aidType === "shelter") { %>selected<% } %>>Shelter</option>
-									</select>
-								</div>
-
-								<div id="cf-submit">
-									<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
-								</div>
-	   
-							</form>
-					   </div>
-				   </div>
-				   <!-- /section title -->
-			   </div>
-			</div> <!-- end container -->
-		</section> <!-- end section -->
 		
 
 
@@ -196,7 +131,6 @@ Fixed Navigation
 					<li><a href="/about">About</a></li>
 					<li><a href="/palestine">Palestine</a></li>
 					<li><a href="/contact">Contact</a></li>
-					<li><a href="404.html">404</a></li>
 				  </ul>
 			</div>
 			  <!-- End of .col-sm-3 -->
