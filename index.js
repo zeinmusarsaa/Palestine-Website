@@ -28,7 +28,7 @@ const knex = require('knex')({
         host: process.env.RDS_HOSTNAME || 'localhost',
         user: process.env.RDS_USERNAME || 'postgres',
         password: process.env.RDS_PASSWORD || 'hi from11',
-        database: process.env.RDS_DB_NAME || 'intexLocal',
+        database: process.env.RDS_DB_NAME || 'ebdbLocal',
         port: process.env.RDS_PORT || 5432,
         ssl: process.env.DB_SSL ? {rejectUnauthorized: false} : false
     }
@@ -55,9 +55,41 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
+app.get('/report', (req, res) => {
+  res.render('report');
+});
+
 app.get('/login', (req, res) => {
   res.render('login', { loggedIn: req.session.loggedIn || 'false' });
 });
+
+app.post('/login', (req, res) => {
+  let username = req.body.username;
+  let password = req.body.password;
+  knex.select('password').from('Users').where('username', username).then( results => {
+      if (results.length > 0)
+      {
+          if (password === results[0].password)
+          {
+              req.session.loggedIn = 'true';
+              res.redirect('/report');
+          }
+          else
+          {
+              req.session.loggedIn = 'password';
+              res.redirect('/login');
+          }
+      }
+      else 
+      {
+          req.session.loggedIn = 'username';
+          res.redirect('/login');
+      }
+  }).catch(err => {
+      console.log(err);
+      res.status(500).json({err});
+  });
+})
 
 // Handle 404 errors
 app.use((req, res) => {
