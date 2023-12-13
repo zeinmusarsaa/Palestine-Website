@@ -11,10 +11,9 @@
   display: flex;
   height: 100%;
   background: #cfd8dc;
-  background: -moz-linear-gradient(-45deg, #cfd8dc 0%, #607d8b 100%, #b0bec5 100%);
-  background: -webkit-linear-gradient(-45deg, #cfd8dc 0%, #607d8b 100%, #b0bec5 100%);
-  background: linear-gradient(135deg, #cfd8dc 0%, #607d8b 100%, #b0bec5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfd8dc', endColorstr='#b0bec5', GradientType=1);
+  background-image: url("https://d7rm5xoig729r.cloudfront.net/collectiveaccess/images/4/8/11491_ca_object_representations_media_4894_large.jpg");
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-size: cover;
 }
 
 .cont_centrar {
