@@ -60,8 +60,10 @@ app.get('/report', (req, res) => {
 })
 
 app.get('/seeRequests', (req, res) => {
-  knex.select().from('requests').then(requests => {
-    res.render('seeRequests', {requests: requests});
+  knex.select().from('Requests').then(Requests => {
+    let loggedIn = req.session.loggedIn || 'false';
+    let edit = req.session.edit || 'false';
+    res.render('seeRequests', {Requests: Requests, loggedIn: loggedIn, edit: edit});
   }).catch(err => {
     console.log(err);
     res.status(500).json({err});
@@ -74,7 +76,7 @@ app.get('/editReq/:id', (req, res) => {
   let edit = 'true';
   let formId = req.params.formId;
   knex.select('formId', 'firstName', 'lastName', 'city', 'phone', 'aidType').from('requests').where('formId', formId).then(form => {
-    res.render('editReq', {request : form /*, loggedIn: loggedIn, edit: edit */});
+    res.render('editReq', {request : form, loggedIn: loggedIn, edit: edit});
   }).catch(err => {
     console.log(err);
     res.status(500).json({err});

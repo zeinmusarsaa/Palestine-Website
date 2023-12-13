@@ -156,21 +156,21 @@ Fixed Navigation
                     </tr>
                 </thead>
                 <tbody>
-                    <% for (let i = 0; i < requests.length; i++){ %>
+                    <% for (let i = 0; i < Requests.length; i++){ %>
                         <tr>
-                            <td><%= requests[i].formId %></td>
-                            <td><%= requests[i].firstName %></td>
-                            <td><%= requests[i].lastName %></td>
-                            <td><%= requests[i].aidType %></td>
-                            <td><%= requests[i].city %></td>
-                            <td><%= requests[i].phone %></td>
+                            <td><%= Requests[i].formId %></td>
+                            <td><%= Requests[i].firstName %></td>
+                            <td><%= Requests[i].lastName %></td>
+                            <td><%= Requests[i].aidType %></td>
+                            <td><%= Requests[i].city %></td>
+                            <td><%= Requests[i].phone %></td>
                             <td style="text-align: center;"> 
-                                <form action="/editReq/<%= requests[i].formId %>" method="get">
+                                <form action="/editReq/<%= Requests[i].formId %>" method="get">
                                     <button type="submit">Edit</button>
                                 </form>
                             </td>
                             <td style="text-align: center;">
-                                <form action="/deleteReq/<%= requests[i].formId %>" method="POST">
+                                <form action="/deleteReq/<%= Requests[i].formId %>" method="POST">
                                     <button type="submit">Delete</button>
                                 </form>
                             </td>
