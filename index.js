@@ -129,8 +129,8 @@ app.post('/login', (req, res) => {
 })
 
 app.post('/enter', (req, res) => {
-  knex('Users').insert(req.body).then( users => {
-      res.redirect('/report');
+  knex('Requests').insert(req.body).then( Requests => {
+      res.redirect('/');
   })
 });
 
