@@ -86,8 +86,14 @@ app.get('/editReq/:id', (req, res) => {
 
 //Save edits to help request
 app.post('/saveEdits/:id', (req, res) => {
-  
-}) 
+  knex("Requests").where("formId", parseInt(req.params.id)).update({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    city: req.body.city,
+    phone: req.body.phone,
+    aidType: req.body.aidType
+  }).then(res.redirect('/seeRequests'));
+});
 
 //Delete a help request
 app.post('/deleteReq/:id', (req, res) => {
