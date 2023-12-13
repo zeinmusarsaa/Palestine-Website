@@ -16,11 +16,11 @@
   { %>
 
     
-      <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="row w-100 m-0">
-          <div class="content-wrapper full-page-wrapper d-flex align-items-center ">
-            <div class="card col-lg-4 mx-auto" style="background-color: rgba(188, 186, 186, 0.897);">
-              <div class="card-body px-5 py-5" style="background-color: rgba(188, 186, 186, 0.897);" >
+    <div class="cotn_principal">
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 80px;">
+        <div class="content-wrapper full-page-wrapper d-flex">
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
                 <h3 class="card-title text-left mb-3" style="color: black; padding-bottom: 5%; " >You are already logged in!</h3>
                 <h4 class="card-title text-left mb-3" style="color: black;">Would you like to log out?</h4>
                 <form action="/logout" method="post">          
@@ -44,11 +44,11 @@
   <% }
   else if (loggedIn == 'username')
   { %>
-      <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="row w-100 m-0">
-          <div class="content-wrapper full-page-wrapper d-flex align-items-center auth">
-            <div class="card col-lg-4 mx-auto" style="background-color: rgba(188, 186, 186, 0.897);">
-              <div class="card-body px-5 py-5" style="background-color: rgba(188, 186, 186, 0.897);" >
+    <div class="cotn_principal">
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 80px;">
+        <div class="content-wrapper full-page-wrapper d-flex">
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
                 <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
                 <form action="/login" method="post">
                   <div class="form-group">
@@ -75,11 +75,11 @@
   <% }
   else if (loggedIn == 'password')
   { %>
-      <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="row w-100 m-0">
-          <div class="content-wrapper full-page-wrapper d-flex align-items-center auth custom-background-4 login-bg">
-            <div class="card col-lg-4 mx-auto" style="background-color: rgba(188, 186, 186, 0.897);">
-              <div class="card-body px-5 py-5" style="background-color: rgba(188, 186, 186, 0.897);" >
+    <div class="cotn_principal">
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 80px;">
+        <div class="content-wrapper full-page-wrapper d-flex">
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
                 <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
                 <form action="/login" method="post">
                   <div class="form-group">
@@ -107,11 +107,11 @@
   
   else 
   {%>
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-      <div class="row w-100 m-0">
-        <div class="content-wrapper full-page-wrapper d-flex align-items-center custom-background-4 login-bg">
-          <div class="card col-lg-4 mx-auto" style="background-color: rgba(188, 186, 186, 0.897);">
-            <div class="card-body px-5 py-5" style="background-color: rgba(188, 186, 186, 0.897);" >
+   <div class="cotn_principal">
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 370px;">
+        <div class="content-wrapper full-page-wrapper d-flex">
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
               <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
               <form action="/login" method="post">
                 <div class="form-group">
@@ -151,7 +151,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="/js/triggerGets.js"></script>
 <!-- endinject -->
-</body>
 </body>
 </html>
 
