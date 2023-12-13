@@ -82,24 +82,21 @@ Fixed Navigation
   
 		<div class="collapse navbar-collapse" id="navigation">
 		  <ul class="navbar-nav ml-auto text-center">
-			<li class = "nav-item" id="home">
-			  <a class="nav-link" href="#">Homepage</a>
-			</li>
-			<li class="nav-item" id="about">
-				<a class="nav-link" href="#">About Us</a>
-			</li>
-			<li class="nav-item" id="palestine">
-				<a class="nav-link" href="#">Palestine</a>
-			</li>
-			<li class="nav-item" id="support">
-				<a class="nav-link"  href="#">Support</a>
+			<li class = "nav-item">
+			  <a class="nav-link" href ="/">Homepage</a>
 			</li>
 			<li class="nav-item ">
+				<a class="nav-link" href="/about">About Us</a>
+			  </li>
+			  <li class="nav-item ">
+				<a class="nav-link" href="/palestine">Palestine</a>
+			  </li>
+			  <li class="nav-item ">
+				<a class="nav-link" href="/support">Support</a>
+			  </li>
+			  <li class="nav-item ">
 				<a class="nav-link" href="/contact">Contact</a>
-			</li>
-			<li class="nav-item" id="login">
-				<a class="nav-link"  href="#">Logout</a>
-			</li>
+			  </li>
 		  </ul>
 		</div>
 	  </nav>
@@ -135,69 +132,33 @@ Fixed Navigation
 					<div class="col-xl-6 col-lg-8">
 					   <div class="title text-center">
 
-						   <h2>Get The Help You Need</h2>
+						   <h2>Edit an Existing Request</h2>
 						   <div class="border"></div>
+                           <form id="contact-form" method="post" role="form">
+                                <div class="form-group mb-4">
+                                    <input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <input type="text" placeholder="Your Location" class="form-control" name="location" id="location" required>
+                                </div>
+        
+                                <div class="form-group mb-4">
+                                    <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject" required>
+                                </div>
+        
+                                <div class="form-group mb-4">
+                                    <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message" required></textarea>
+                                </div>
+                                <div id="cf-submit">
+                                    <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+                                </div>
+	   
+						    </form>
 					   </div>
 				   </div>
 				   <!-- /section title -->
 			   </div>
-
-				<div class="row">
-					
-					<!-- Contact Details -->
-					<div class="contact-details col-md-6 ">
-						<h3 class="mb-3">Request or Recieve Help</h3>
-						<p>Through this form, you will be able to see those who need help or want to give out help to you. This is inspired
-							by the lack of internet in Gaza, and thus many people are not able to communicate their needs. If you need anything, submit your information and what you need!
-						</p>
-						<!--/. End Footer Social Links -->
-					</div>
-					<!-- / End Contact Details -->
-	   
-					<!-- Contact Form -->
-
-			
-					<div class="contact-form col-md-6 text-center">
-						<div class="container">
-							<div class="yes-no-buttons">
-								<a href="#" class="option btn btn-primary">Request Help</a>
-								<span class="slide"></span>
-								<a href="#" class="option btn btn-danger">Recieve Help</a>
-							</div>
-							<br>
-							<br>
-						
-					
-						
-						<form id="contact-form" method="post" role="form">
-							<div class="form-group mb-4">
-								<input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
-							</div>
-	   
-							<div class="form-group mb-4">
-								<input type="email" placeholder="Your Email" class="form-control" name="email" id="email" required>
-							</div>
-
-							<div class="form-group mb-4">
-								<input type="text" placeholder="Your Location" class="form-control" name="location" id="location" required>
-							</div>
-	   
-							<div class="form-group mb-4">
-								<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject" required>
-							</div>
-	   
-							<div class="form-group mb-4">
-								<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message" required></textarea>
-							</div>
-							<div id="cf-submit">
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
-							</div>
-	   
-						</form>
-					</div>
-					<!-- ./End Contact Form -->
-	   
-				</div> <!-- end row -->
 			</div> <!-- end container -->
 		</section> <!-- end section -->
 		
@@ -274,7 +235,6 @@ Fixed Navigation
 
 <!-- Custom js -->
 <script src="js/script.js"></script>
-<script src="/js/triggers.js"></script>
 
 </body>
 
