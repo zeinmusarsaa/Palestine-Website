@@ -101,16 +101,16 @@ app.post('/login', (req, res) => {
   knex.select('password').from('Users').where('username', username).then( results => {
       if (results.length > 0)
       {
-          if (password === results[0].password)
-          {
-              req.session.loggedIn = 'true';
-              res.redirect('/report');
-          }
-          else
-          {
-              req.session.loggedIn = 'password';
-              res.redirect('/login');
-          }
+        if (password === results[0].password)
+        {
+            req.session.loggedIn = 'true';
+            res.redirect('/');
+        }
+        else
+        {
+            req.session.loggedIn = 'password';
+            res.redirect('/login');
+        }
       }
       else 
       {
@@ -128,6 +128,13 @@ app.post('/enter', (req, res) => {
       res.redirect('/report');
   })
 });
+
+app.post('/logout', (req, res) => {
+  req.session.loggedIn = 'false';
+  req.session.edit = 'false';
+  res.redirect('/')
+})
+
 
 // Handle 404 errors
 app.use((req, res) => {
