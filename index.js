@@ -58,7 +58,7 @@ app.get('/contact', (req, res) => {
 app.get('/report', (req, res) => {
   res.render('report');
 })
-  
+
 app.get('/seeRequests', (req, res) => {
   res.render('seeRequests');
 })
@@ -117,6 +117,12 @@ app.post('/login', (req, res) => {
       res.status(500).json({err});
   });
 })
+
+app.post('/enter', (req, res) => {
+  knex('Users').insert(req.body).then( users => {
+      res.redirect('/report');
+  })
+});
 
 // Handle 404 errors
 app.use((req, res) => {
