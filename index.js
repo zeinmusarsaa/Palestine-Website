@@ -90,7 +90,7 @@ app.post('/saveEdits/:id', (req, res) => {
 
 //Delete a help request
 app.post('/deleteReq/:id', (req, res) => {
-  knex('requests').where('formId', req.params.formId).del().then(requests => {
+  knex('Requests').where('formId', req.params.id).del().then(Requests => {
     res.redirect('/seeRequests');
   }).catch(err => {
     console.log(err);
@@ -111,7 +111,7 @@ app.post('/login', (req, res) => {
         if (password === results[0].password)
         {
             req.session.loggedIn = 'true';
-            res.redirect('/');
+            res.redirect('/seeRequests');
         }
         else
         {
