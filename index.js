@@ -60,8 +60,13 @@ app.get('/report', (req, res) => {
 })
 
 app.get('/seeRequests', (req, res) => {
-  res.render('seeRequests');
-})
+  knex.select().from('requests').then(requests => {
+    res.render('seeRequests', {requests: requests});
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json({err});
+  });
+});
 
 //Edit a help request
 app.get('/editReq/:id', (req, res) => {

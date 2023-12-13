@@ -144,7 +144,6 @@ Fixed Navigation
                 <thead>
                     <tr>
                         <th>FormID</th>
-                        <th>Timestamp</th> <!-- Do we want this? -->
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Aid Requested</th>
@@ -156,7 +155,6 @@ Fixed Navigation
                     <% for (let i = 0; i < requests.length; i++){ %>
                         <tr>
                             <td><%= requests[i].formId %></td>
-                            <!-- <td><%= requests[i].timestamp %></td> -->
                             <td><%= requests[i].firstName %></td>
                             <td><%= requests[i].lastName %></td>
                             <td><%= requests[i].aidType %></td>
