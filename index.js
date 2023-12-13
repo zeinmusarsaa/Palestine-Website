@@ -55,6 +55,33 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
+app.get('/seeRequests', (req, res) => {
+  res.render('seeRequests');
+})
+
+//Edit a help request
+app.get('/editReq/:id', (req, res) => {
+  let loggedIn = req.session.loggedIn || 'false';
+  let edit = 'true';
+  let formId = req.params.formId;
+  knex.select('formId', 'firstName', 'lastName', 'aidType', 'city', 'phone').from('requests').where('formId', formId).then(form => {
+    res.render('editReq', {form : form, loggedIn: loggedIn, edit: edit});
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json({err});
+  });
+});
+
+//Delete a help request
+app.post('/deleteReq/:id', (req, res) => {
+  knex('requests').where('formId', req.params.formId).del().then(requests => {
+    res.redirect('/seeRequests');
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json({err});
+  });
+});
+
 app.get('/login', (req, res) => {
   res.render('login', { loggedIn: req.session.loggedIn || 'false' });
 });
