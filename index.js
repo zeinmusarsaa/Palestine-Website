@@ -57,6 +57,7 @@ app.get('/contact', (req, res) => {
 
 app.get('/report', (req, res) => {
   res.render('report');
+})
   
 app.get('/seeRequests', (req, res) => {
   res.render('seeRequests');
