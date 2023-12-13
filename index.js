@@ -68,13 +68,18 @@ app.get('/editReq/:id', (req, res) => {
   let loggedIn = req.session.loggedIn || 'false';
   let edit = 'true';
   let formId = req.params.formId;
-  knex.select('formId', 'firstName', 'lastName', 'aidType', 'city', 'phone').from('requests').where('formId', formId).then(form => {
-    res.render('editReq', {form : form, loggedIn: loggedIn, edit: edit});
+  knex.select('formId', 'firstName', 'lastName', 'city', 'phone', 'aidType').from('requests').where('formId', formId).then(form => {
+    res.render('editReq', {request : form /*, loggedIn: loggedIn, edit: edit */});
   }).catch(err => {
     console.log(err);
     res.status(500).json({err});
   });
 });
+
+//Save edits to help request
+app.post('/saveEdits/:id', (req, res) => {
+  
+}) 
 
 //Delete a help request
 app.post('/deleteReq/:id', (req, res) => {

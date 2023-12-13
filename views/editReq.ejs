@@ -135,26 +135,38 @@ Fixed Navigation
 						   <h2>Edit an Existing Request</h2>
 						   <div class="border"></div>
                            <form id="contact-form" method="post" role="form">
-                                <div class="form-group mb-4">
-                                    <input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
-                                </div>
+							<div class="form-group mb-4">
+								<input type="text" placeholder="Your First Name" class="form-control" name="firstName" id="firstName" value="<%= request[0].firstName %>" required>
+							</div>
 
-                                <div class="form-group mb-4">
-                                    <input type="text" placeholder="Your Location" class="form-control" name="location" id="location" required>
-                                </div>
-        
-                                <div class="form-group mb-4">
-                                    <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject" required>
-                                </div>
-        
-                                <div class="form-group mb-4">
-                                    <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message" required></textarea>
-                                </div>
-                                <div id="cf-submit">
-                                    <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
-                                </div>
+							<div class="form-group mb-4">
+								<input type="text" placeholder="Your Last Name" class="form-control" name="lastName" id="lastName" value="<%= request[0].lastName %>" required>
+							</div>
+
+							<div class="form-group mb-4">
+								<input type="text" placeholder="Your City" class="form-control" name="city" id="city" value="<%= request[0].city %>"required>
+							</div>
+
+							<div class="form-group mb-4">
+								<input type="text" placeholder="Your Phone Number" class="form-control" name="phoneNumber" id="phoneNumber" value="<%= request[0].phoneNumber %>" required>
+							</div>
+							
+							<div class="form-group mb-4">
+								<label for="aidType">Type of Aid Needed:</label>
+								<select name="aidType" required>
+									<option value="water" <% if (requests[0].aidType === "water") {selected} %>>Water</option>
+									<option value="food" <% if (requests[0].aidType === "food") {selected} %>>Food</option>
+									<option value="medicalSupplies" <% if (requests[0].aidType === "medicalSupplies") {selected} %>>Medical Supplies</option>
+									<option value="phoneSims" <% if (requests[0].aidType === "phoneSims") {selected} %>>Phone SIMs</option>
+									<option value="shelter" <% if (requests[0].aidType === "shelter") {selected} %>>Shelter</option>
+								</select>
+							</div>
+
+							<div id="cf-submit">
+								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+							</div>
 	   
-						    </form>
+						</form>
 					   </div>
 				   </div>
 				   <!-- /section title -->

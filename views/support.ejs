@@ -162,24 +162,32 @@ Fixed Navigation
 										
 						<form id="contact-form" action="/enter" method="post" role="form">
 							<div class="form-group mb-4">
-								<input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
-							</div>
-	   
-							<div class="form-group mb-4">
-								<input type="email" placeholder="Your Email" class="form-control" name="email" id="email" required>
+								<input type="text" placeholder="Your First Name" class="form-control" name="firstName" id="firstName" required>
 							</div>
 
 							<div class="form-group mb-4">
-								<input type="text" placeholder="Your Location" class="form-control" name="location" id="location" required>
+								<input type="text" placeholder="Your Last Name" class="form-control" name="lastName" id="lastName" required>
 							</div>
-	   
+
 							<div class="form-group mb-4">
-								<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject" required>
+								<input type="text" placeholder="Your City" class="form-control" name="city" id="city" required>
 							</div>
-	   
+
 							<div class="form-group mb-4">
-								<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message" required></textarea>
+								<input type="text" placeholder="Your Phone Number" class="form-control" name="phoneNumber" id="phoneNumber" required>
 							</div>
+							
+							<div class="form-group mb-4">
+								<label for="aidType">Type of Aid Needed:</label>
+								<select name="aidType" required>
+									<option value="water">Water</option>
+									<option value="food">Food</option>
+									<option value="medicalSupplies">Medical Supplies</option>
+									<option value="phoneSims">Phone SIMs</option>
+									<option value="shelter">Shelter</option>
+								</select>
+							</div>
+
 							<div id="cf-submit">
 								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
 							</div>
