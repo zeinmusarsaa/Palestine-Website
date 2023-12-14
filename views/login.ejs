@@ -74,7 +74,7 @@ Fixed Navigation
       <nav class="navbar navbar-expand-lg navbar-light px-0">
         <!-- logo -->
         <a class="navbar-brand logo" href="/">
-      <img loading="lazy" class="logo-white" src="images/logo.png" alt="logo" width="50" height="50" />
+      <img loading="lazy" class="logo-white" src="/images/logo.png" alt="logo" width="50" height="50" />
       <img loading="lazy" class="logo-default" src="https://i.pinimg.com/564x/ea/10/42/ea1042321bb4365ca553d890c2417d1b.jpg" alt="logo" width="50" height="50" />
       
         </a>
@@ -118,7 +118,7 @@ Fixed Navigation
       <div class="align-items-center" style="padding-top: 180px; padding-right: 340px;">
         <div class="content-wrapper full-page-wrapper d-flex">
           <div class="card col-lg-4 mx-auto" style="background-color: rgba(139, 88, 88, 0);">
-            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897); height:fit-content" >
               <h3 class="card-title text-left mb-3" style="color: black;" >You are already logged in!</h3>
                 <form action="/logout" method="post">          
                   <div class="form-group" >
@@ -141,11 +141,11 @@ Fixed Navigation
   <% }
   else if (loggedIn == 'username')
   { %>
-    <div class="cotn_principal">
-      <div class="align-items-center" style="padding-top: 180px; padding-right: 370px;">
+    <div class="cotn_principal justify-content-center" >
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 340px;">
         <div class="content-wrapper full-page-wrapper d-flex">
-          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
-            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897); height: 325px" >
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(139, 88, 88, 0);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897); height:fit-content" >
                 <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
                 <form action="/login" method="post">
                   <div class="form-group">
@@ -172,11 +172,11 @@ Fixed Navigation
   <% }
   else if (loggedIn == 'password')
   { %>
-    <div class="cotn_principal">
-      <div class="align-items-center" style="padding-top: 180px; padding-right: 370px;">
+    <div class="cotn_principal justify-content-center" >
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 340px;">
         <div class="content-wrapper full-page-wrapper d-flex">
-          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
-            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897); height: 325px" >
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(139, 88, 88, 0);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897); height:fit-content" >
                 <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
                 <form action="/login" method="post">
                   <div class="form-group">
@@ -204,11 +204,11 @@ Fixed Navigation
   
   else 
   {%>
-   <div class="cotn_principal">
-      <div class="align-items-center" style="padding-top: 180px; padding-right: 370px;">
+    <div class="cotn_principal justify-content-center" >
+      <div class="align-items-center" style="padding-top: 180px; padding-right: 340px;">
         <div class="content-wrapper full-page-wrapper d-flex">
-          <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
-            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897); height: 325px" >
+          <div class="card col-lg-4 mx-auto" style="background-color: rgba(139, 88, 88, 0);">
+            <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897); height:fit-content" >
               <h3 class="card-title text-left mb-3" style="color: black;" >Login</h3>
               <form action="/login" method="post">
                 <div class="form-group">
