@@ -11,6 +11,11 @@
  <link rel="shortcut icon" type="image/x-icon" href="https://i.pinimg.com/564x/94/56/53/945653c6640163ed19c061b4f9c51292.jpg"/>
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+ <style>
+  .btn-outline {
+    border-color: #50050d;
+  }
+ </style>
 </head>
 <body>
   <% if (loggedIn == 'true') 
@@ -25,12 +30,12 @@
               <h3 class="card-title text-left mb-3" style="color: black;" >You are already logged in!</h3>
                 <form action="/logout" method="post">          
                   <div class="form-group" >
-                    <button type="submit" class="btn btn-primary btn-block enter-btn">Logout</button>
+                    <button type="submit" class="btn btn-primary btn-block enter-btn btn-outline" style="background-color: #50050d;">Logout</button>
                   </div>
                 </form>
                   <form action="/seeRequests" method="get">
                   <div class="form-group" >
-                    <button type="submit" class="btn btn-primary btn-block enter-btn" style="margin-top:10px">See Report</button>
+                    <button type="submit" class="btn btn-primary btn-block enter-btn btn-outline" style="margin-top:10px; background-color: #50050d;">See Report</button>
                   </div>
                 </form>
               </div>
@@ -61,7 +66,7 @@
                     <input required type="password" class="form-control p_input" name="password" id="password">
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-block enter-btn" style="margin-top: 10px;">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block enter-btn btn-outline" style="margin-top: 10px; background-color: #50050d;">Login</button>
                   </div>
                 </form>
               </div>
@@ -92,7 +97,7 @@
                   </div>
                   <p class="text-danger" style="margin-bottom: 0px;"><small>*Incorrect Password</small></p>
                   <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-block enter-btn" style="margin-top: 10px;">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block enter-btn btn-outline" style="margin-top: 10px; background-color: #50050d;">Login</button>
                   </div>
                 </form>
               </div>
@@ -124,7 +129,7 @@
                 </div>
               
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary btn-block enter-btn" style="margin-top: 36px;">Login</button>
+                  <button type="submit" class="btn btn-primary btn-block enter-btn btn-outline" style="margin-top: 36px; background-color: #50050d;">Login</button>
                 </div>
               </form>
             </div>
