@@ -24,13 +24,18 @@
             <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
               <h3 class="card-title text-left mb-3" style="color: black;" >You are already logged in!</h3>
                 <form action="/logout" method="post">          
-                  <div class="form-group" >
-                    <button type="submit" class="btn btn-primary btn-block enter-btn">Logout</button>
+                  <div class="cf-submit" >
+                    <button type="submit" class="btn btn-transparent">Logout</button>
                   </div>
                 </form>
                   <form action="/seeRequests" method="get">
-                  <div class="form-group" >
-                    <button type="submit" class="btn btn-primary btn-block enter-btn" style="margin-top:10px">See Report</button>
+                  <div class="cf-submit" >
+                    <button type="submit" class="btn btn-transparent" style="margin-top:10px">See Requests</button>
+                  </div>
+                </form>
+                <form action="/" method="get">
+                  <div class="cf-submit" >
+                    <button type="submit" class="btn btn-transparent" style="margin-top:10px">Go Home</button>
                   </div>
                 </form>
               </div>

@@ -130,32 +130,113 @@ Fixed Navigation
 				<ol class="breadcrumb header-bradcrumb justify-content-center">
 				</ol>
 			</div>
-            <div class=" grid-margin stretch-card mx-auto" style="width: 50%;">
-                <div class="card" style="background-color: rgba(139, 88, 88, 0.897);">
-                  <div class="card-body" style="background-color: rgba(139, 88, 88, 0.897);" ><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                      <form action="/createUser" method="post" style="color: white;">
-                        <div class="form-group">
-                          <label>Username</label>
-                          <input autofocus required type="text" class="form-control p_input" id="username" name="username">
-                        </div>
-                        <div class="form-group">
-                          <label>Password</label>
-                          <input required type="password" class="form-control p_input" id="password" name="password">
-                        </div>
-                        <div class="form-group">
-                            <label>First Name</label>
-                            <input required type="text" class="form-control p_input" id="firstName" name="firstName">
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name</label>
-                            <input required type="text" class="form-control p_input" id="lastName" name="lastName">
-                        </div>
-                        <div class="text-center">
-                          <button type="submit" class="btn btn-primary btn-block enter-btn">Create</button>
-                        </div>                  
-                       </form>
-                    </div>
+           
+		</div>
+	</div>
+</section>
+<!-- Start form section -->
+<!-- <section class="company-mission section-sm bg-gray">
+  <div class="container">
+		<div class="row">
+			<div class="col-md-6">
+        <div class=" grid-margin stretch-card mx-auto" style="width: 50%;">
+          <div class="card" style="background-color: rgba(139, 88, 88, 0.897);">
+            <div class="card-body" style="background-color: rgba(139, 88, 88, 0.897);" ><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                <form action="/createUser" method="post" style="color: white;">
+                  <div class="form-group">
+                    <label>Username</label>
+                    <input autofocus required type="text" class="form-control p_input" id="username" name="username">
                   </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input required type="password" class="form-control p_input" id="password" name="password">
+                  </div>
+                  <div class="form-group">
+                      <label>First Name</label>
+                      <input required type="text" class="form-control p_input" id="firstName" name="firstName">
+                  </div>
+                  <div class="form-group">
+                      <label>Last Name</label>
+                      <input required type="text" class="form-control p_input" id="lastName" name="lastName">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block enter-btn">Create</button>
+                  </div>                  
+                </form>
+              </div>
+            </div>
+        </div>
+</section> -->
+
+<section class="company-mission section-sm bg-gray">
+	<div class="container">
+		<div class="row">
+      <!-- user creation forms -->
+      <div class="col-md-6">
+        <div class=" grid-margin stretch-card mx-auto" style="width: 50%;">
+          <div class="card" style="background-color: rgba(139, 88, 88, 0.897);">
+            <div class="card-body" style="background-color: rgba(139, 88, 88, 0.897);" ><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                <form action="/createUser" method="post" style="color: white;">
+                  <div class="form-group">
+                    <label>Username</label>
+                    <input autofocus required type="text" class="form-control p_input" id="username" name="username">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input required type="password" class="form-control p_input" id="password" name="password">
+                  </div>
+                  <div class="form-group">
+                      <label>First Name</label>
+                      <input required type="text" class="form-control p_input" id="firstName" name="firstName">
+                  </div>
+                  <div class="form-group">
+                      <label>Last Name</label>
+                      <input required type="text" class="form-control p_input" id="lastName" name="lastName">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block enter-btn">Create</button>
+                  </div>                  
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+			<div class="col-md-6 mt-5 mt-md-0">  <!-- section title -->
+        <div class="title text-center">
+            <h2>Existing Users</h2>
+            <div class="border"></div>
+        </div>      
+             <!-- /section title -->
+              <div class="table-responsive" style="height: 300px; overflow-y: auto;">
+                  <table class="mx-auto table table-striped" style="width: 75%;">
+                    <thead>
+                        <tr>
+                            <th>User Id</th>
+                            <th>UserName</th>
+                            <th>Password</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i = 0; i < Users.length; i++){ %>
+                            <tr>
+                                <td><%= Users[i].userId %></td>
+                                <td><%= Users[i].username %></td>
+                                <td><%= Users[i].password %></td>
+                                <td><%= Users[i].firstName %></td>
+                                <td><%= Users[i].lastName %></td>
+                                <td style="text-align: center;">
+                                    <form action="/deleteUser/<%= Users[i].userId %>" method="POST">
+                                        <button class="btn-delete" type="submit">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+              </div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -163,26 +244,26 @@ Fixed Navigation
 <!-- Start Portfolio Section
 		=========================================== -->
 
-		<section class="contact-us" id="contact">
+		<!-- <section class="contact-us" id="contact">
 			<div class="container">
-				<div class="row justify-content-center">
+				<div class="row justify-content-center"> -->
 					<!-- section title -->
-					<div class="col-xl-6 col-lg-8">
+					<!-- <div class="col-xl-6 col-lg-8">
 					   <div class="title text-center">
 
 						   <h2>Existing Users</h2>
 						   <div class="border"></div>
-					   </div>
+					   </div> -->
                        
                           
-                      </div>
-				   </div>
+                      <!-- </div>
+				   </div> -->
 				   <!-- /section title -->
-			   </div>
-			</div> <!-- end container -->
+			   <!-- </div>
+			</div> end container -->
 
             
-            <div class="table-responsive" style="height: 300px; overflow-y: auto;">
+            <!-- <div class="table-responsive" style="height: 300px; overflow-y: auto;">
                 <table class="mx-auto table table-striped" style="width: 75%;">
                   <thead>
                       <tr>
@@ -210,9 +291,9 @@ Fixed Navigation
                       <% } %>
                   </tbody>
               </table>
-            </div>
+            </div> -->
 
-		</section> <!-- end section -->
+		<!-- </section> end section -->
 		<footer id="footer" class="bg-one">
 			<div class="top-footer">
 			  <div class="container">
@@ -267,15 +348,14 @@ Fixed Navigation
                     <h3 class="card-title text-left mb-3" style="color: black;" >Please Login to see this Page</h3>
                     
                     <form action="/login" method="get">          
-                      <div class="text-center" >
-                        <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                      <div class="cf-submit" >
+                        <button type="submit" class="btn btn-transparent">Login</button>
                       </div>
                     </form>
-      
                     <br>
                       <form action="/" method="get">
-                      <div class="text-center" >
-                        <button type="submit" class="btn btn-primary btn-block enter-btn">Return to Home</button>
+                      <div class="cf-submit" >
+                        <button type="submit" class="btn btn-transparent">Return to Home</button>
                       </div>
                     </form>
                   </div>
