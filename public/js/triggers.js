@@ -13,6 +13,8 @@ document.getElementById('home').addEventListener('click', function() {
 document.getElementById('login').addEventListener('click', function() {
     window.location.href = '/login';
 });
+
+
 // document.getElementById('report').addEventListener('click', function() {
 //     window.location.href = '/report';
 // });

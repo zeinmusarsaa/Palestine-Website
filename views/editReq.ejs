@@ -8,12 +8,16 @@
 -->
 
 <html lang="en">
+
+
+
+  
 <head>
 
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Palestine</title>
+  <title>Edit Request</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -29,20 +33,19 @@
   <!-- CSS
   ================================================== -->
   <!-- Themefisher Icon font -->
-  <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+  <link rel="stylesheet" href="/public/plugins/themefisher-font/style.css">
   <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/plugins/bootstrap/bootstrap.min.css">
   <!-- Lightbox.min css -->
-  <link rel="stylesheet" href="plugins/lightbox2/css/lightbox.min.css">
+  <link rel="stylesheet" href="/public/plugins/lightbox2/css/lightbox.min.css">
   <!-- animation css -->
-  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <link rel="stylesheet" href="/public/plugins/animate/animate.css">
   <!-- Slick Carousel -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="/public/plugins/slick/slick.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-
 </head>
 <body id="body">
 
@@ -72,10 +75,10 @@ Fixed Navigation
 	  <nav class="navbar navbar-expand-lg navbar-light px-0">
 		<!-- logo -->
 		<a class="navbar-brand logo" href="/">
-			<img loading="lazy" class="logo-white" src="images/logo.png" alt="logo" width="50" height="50" />
-			<img loading="lazy" class="logo-default" src="https://i.pinimg.com/564x/ea/10/42/ea1042321bb4365ca553d890c2417d1b.jpg" alt="logo" width="50" height="50" />
-			
-		  </a>
+		  <img loading="lazy" class="logo-white" src="images/logo.png" alt="logo" width="50" height="50" />
+		  <img loading="lazy" class="logo-default" src="https://i.pinimg.com/564x/ea/10/42/ea1042321bb4365ca553d890c2417d1b.jpg" alt="logo" width="50" height="50" />
+		  
+		</a>
 		<!-- /logo -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
 		  aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,20 +87,23 @@ Fixed Navigation
   
 		<div class="collapse navbar-collapse" id="navigation">
 		  <ul class="navbar-nav ml-auto text-center">
-			<li class = "nav-item">
-			  <a class="nav-link" href ="/">Homepage</a>
+			<li class = "nav-item" id="home">
+			  <a class="nav-link" href="#">Homepage</a>
 			</li>
-			<li class="nav-item ">
-				<a class="nav-link" href="/about">About Us</a>
+			<li class="nav-item" id="about">
+				<a class="nav-link" href="#">About Us</a>
 			  </li>
-			  <li class="nav-item ">
-				<a class="nav-link" href="/palestine">Palestine</a>
+			  <li class="nav-item" id="palestine">
+				<a class="nav-link" href="#">Palestine</a>
 			  </li>
-			  <li class="nav-item ">
-				<a class="nav-link" href="/support">Support</a>
+			  <li class="nav-item" id="support">
+				<a class="nav-link"  href="#">Support</a>
+			  </li>
+			  <li class="nav-item" id="login">
+				  <a class="nav-link"  href="#">Login</a>
 			  </li>
 			  <li class="nav-item" id="logout">
-				<a class="nav-link" id="logout-link" href="#">Logout</a>
+				  <a class="nav-link" id="logout-link" href="#">Logout</a>
 			  </li>
 		  </ul>
 		</div>
@@ -110,14 +116,14 @@ Fixed Navigation
   ==================================== -->
   
 
-<section class="single-page-header">
+  <section class="single-page-header">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Show Support!</h2>
+				<h2>Edit Requests</h2>
 				<ol class="breadcrumb header-bradcrumb justify-content-center">
-					<li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Show Support</li>
+					<li class="breadcrumb-item"><a href="/createUser" class="text-white">Edit Users</a></li>
+					<li class="breadcrumb-item active" aria-current="page" style="text-decoration: none;"></li>
 				</ol>
 			</div>
 		</div>
@@ -178,49 +184,48 @@ Fixed Navigation
 		
 
 
-	<footer id="footer" class="bg-one">
-		<div class="top-footer">
-		  <div class="container">
-			<div class="row justify-content-around">
-			  <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-				<h3>about</h3>
-				<p>The richness of the history and culture of Palestine is still preserved today, this website showcases this beautiful history.</p>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-	  
-			  <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-				<ul>
-					<li>
-					  <h3>Quick Links</h3>
-					</li>
-					<li><a href="/about">About</a></li>
-					<li><a href="/palestine">Palestine</a></li>
-					<li><a href="/contact">Contact</a></li>
-					<li><a href="404.html">404</a></li>
-				  </ul>
+		<footer id="footer" class="bg-one">
+			<div class="top-footer">
+			  <div class="container">
+				<div class="row justify-content-around">
+				  <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+					<h3>about</h3>
+					<p>The richness of the history and culture of Palestine is still preserved today, this website showcases this beautiful history.</p>
+				  </div>
+				  <!-- End of .col-sm-3 -->
+		  
+				  <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+					<ul>
+						<li>
+						  <h3>Quick Links</h3>
+						</li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/palestine">Palestine</a></li>
+						<li><a href="/contact">Contact</a></li>
+					  </ul>
+				</div>
+				  <!-- End of .col-sm-3 -->
+		  
+				  <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+					<ul>
+						<li>
+						  <h3>Connect with the IS Department</h3>
+						</li>
+						<li><a href="https://marriott.byu.edu/infosys/">Marriott School Website</a></li>
+						<li><a href="https://marriott.byu.edu/infosys/admissions/bsis/admission-criteria/">Admissions Information</a></li>
+						<li><a href="https://ais.byu.edu/">AIS Webpage</a></li>
+					  </ul>
+				</div>
+				  <!-- End of .col-sm-3 -->
+		  
+				</div>
+			  </div> <!-- end container -->
 			</div>
-			  <!-- End of .col-sm-3 -->
-	  
-			  <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
-				<ul>
-					<li>
-					  <h3>Connect with the IS Department</h3>
-					</li>
-					<li><a href="https://marriott.byu.edu/infosys/">Marriott School Website</a></li>
-					<li><a href="https://marriott.byu.edu/infosys/admissions/bsis/admission-criteria/">Admissions Information</a></li>
-					<li><a href="https://ais.byu.edu/">AIS Webpage</a></li>
-				  </ul>
+			<div class="footer-bottom">
+			  <h5>&copy; Copyright 2023. All rights reserved.</h5>
 			</div>
-			  <!-- End of .col-sm-3 -->
-	  
-			</div>
-		  </div> <!-- end container -->
-		</div>
-		<div class="footer-bottom">
-		  <h5>&copy; Copyright 2023. All rights reserved.</h5>
-		</div>
-	  </footer> <!-- end footer -->
-	  
+		  </footer> <!-- end footer -->
+		
 
 
 <!-- end Footer Area
@@ -229,26 +234,25 @@ Fixed Navigation
     Essential Scripts
     =====================================-->
 <!-- Main jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="/public/plugins/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap4 -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="/public/plugins/bootstrap/bootstrap.min.js"></script>
 <!-- Parallax -->
-<script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
+<script src="/public/plugins/parallax/jquery.parallax-1.1.3.js"></script>
 <!-- lightbox -->
-<script src="plugins/lightbox2/js/lightbox.min.js"></script>
+<script src="/public/plugins/lightbox2/js/lightbox.min.js"></script>
 <!-- Owl Carousel -->
-<script src="plugins/slick/slick.min.js"></script>
+<script src="/public/plugins/slick/slick.min.js"></script>
 <!-- filter -->
-<script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+<script src="/public/plugins/filterizr/jquery.filterizr.min.js"></script>
 <!-- Smooth Scroll js -->
-<script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
-<!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
-<script src="plugins/google-map/gmap.js"></script>
+<script src="/public/plugins/smooth-scroll/smooth-scroll.min.js"></script>
+
+
 
 <!-- Custom js -->
-<script src="js/script.js"></script>
+<script src="/js/script.js"></script>
 <script src="/js/triggers.js"></script>
 
 </body>
