@@ -8,6 +8,44 @@
 -->
 
 <html lang="en">
+  <style>
+            table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn-edit, .btn-delete {
+        padding: 8px 12px;
+        margin: 4px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn-edit {
+        background-color: #1f7d27;
+        color: #fff;
+        border: none;
+    }
+
+    .btn-delete {
+        background-color: #50050d;
+        color: #fff;
+        border: none;
+    }
+    
+  </style>
+  
 <head>
 
   <!-- Basic Page Needs
@@ -114,13 +152,26 @@ Fixed Navigation
 <% if (loggedIn == 'true') { 
 	%>  
 
-<section class="single-page-header">
+<!-- <section class="single-page-header">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb header-bradcrumb justify-content-center">
           <form action="/createUser" method="get"><button class="btn btn-lg btn-outline-danger" style="color: rgba(139, 88, 88, 0.897); font-weight: bold; font-size: xx-large;" type="submit">View/Edit Users</button></form>
 
+				</ol>
+			</div>
+		</div>
+	</div>
+</section> -->
+<section class="single-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Manage Requests</h2>
+				<ol class="breadcrumb header-bradcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="/createUser" class="text-white">Edit Users</a></li>
+					<li class="breadcrumb-item active" aria-current="page" style="text-decoration: none;"></li>
 				</ol>
 			</div>
 		</div>
@@ -148,11 +199,21 @@ Fixed Navigation
             <table class="mx-auto">
                 <thead>
                     <tr>
-                        <th>FormID</th>
+
+
+                      <th>FormId</th>
+
+
+
+
                         <th>First Name</th>
+
                         <th>Last Name</th>
+
                         <th>Aid Requested</th>
+
                         <th>City</th>
+
                         <th>Phone</th>
                     </tr>
                 </thead>
@@ -167,12 +228,12 @@ Fixed Navigation
                             <td><%= Requests[i].phone %></td>
                             <td style="text-align: center;"> 
                                 <form action="/editReq/<%= Requests[i].formId %>" method="get">
-                                    <button type="submit">Edit</button>
+                                    <button class="btn-block btn-edit" type="submit">Edit</button>
                                 </form>
                             </td>
                             <td style="text-align: center;">
                                 <form action="/deleteReq/<%= Requests[i].formId %>" method="POST">
-                                    <button type="submit">Delete</button>
+                                    <button class="btn-block btn-delete" type="submit">Delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -227,14 +288,12 @@ Fixed Navigation
 		<% } 
                 
         else 
-        {%> 
-          
-        
-          <div class="container-fluid page-body-wrapper full-page-wrapper">
-            <div class="row w-100 m-0">
-              <div class="content-wrapper full-page-wrapper d-flex align-items-center ">
-                <div class="card col-lg-4 mx-auto" style="background-color: rgba(188, 186, 186, 0.897);">
-                  <div class="card-body px-5 py-5" style="background-color: rgba(188, 186, 186, 0.897);" >
+        {%>         
+          <div class="cotn_principal">
+            <div class="align-items-center" style="padding-top: 180px; padding-left: 550px;">
+              <div class="content-wrapper full-page-wrapper d-flex">
+                <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+                  <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
                     <h3 class="card-title text-left mb-3" style="color: black;" >Please Login to see this Page</h3>
                     
                     <form action="/login" method="get">          
@@ -242,6 +301,7 @@ Fixed Navigation
                         <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
                       </div>
                     </form>
+      
                     <br>
                       <form action="/" method="get">
                       <div class="text-center" >

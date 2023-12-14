@@ -42,7 +42,62 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+<style>
 
+
+    .form-container,
+    .table-container {
+      width: 48%; /* Adjust the width as needed */
+    }
+
+    .form-container {
+      background-color: white;
+      color: rgb(3, 1, 1);
+      padding: 20px;
+    }
+
+    .table-container {
+      background-color: white;
+      color: rgb(10, 8, 8);
+      max-height: 500px;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+
+            text-align: center;
+            border-bottom: 1px solid white;
+        }
+
+        th {
+            background-color: white;
+        }
+        .btn-edit, .btn-delete {
+        padding: 8px 12px;
+        margin: 4px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn-delete {
+      background-color: #1e5005;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      margin: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    
+</style>
 </head>
 <body id="body">
 
@@ -117,57 +172,55 @@ Fixed Navigation
 <section class="single-page-header">
 	<div class="container">
 		<div class="row">
+      
 			<div class="col-md-12">
-				<h2>Create User</h2>
+				<h2 style="text-align: center;">Create User</h2>
 				<ol class="breadcrumb header-bradcrumb justify-content-center">
 				</ol>
 			</div>
-            <div class=" grid-margin stretch-card mx-auto" style="width: 50%;">
-                <div class="card" style="background-color: rgba(139, 88, 88, 0.897);">
-                  <div class="card-body" style="background-color: rgba(139, 88, 88, 0.897);" ><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                      <form action="/createUser" method="post" style="color: white;">
-                        <div class="form-group">
-                          <label>Username</label>
-                          <input autofocus required type="text" class="form-control p_input" id="username" name="username">
-                        </div>
-                        <div class="form-group">
-                          <label>Password</label>
-                          <input required type="password" class="form-control p_input" id="password" name="password">
-                        </div>
-                        <div class="form-group">
-                            <label>First Name</label>
-                            <input required type="text" class="form-control p_input" id="firstName" name="firstName">
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name</label>
-                            <input required type="text" class="form-control p_input" id="lastName" name="lastName">
-                        </div>
-                        <div class="text-center">
-                          <button type="submit" class="btn btn-primary btn-block enter-btn">Create</button>
-                        </div>                  
-                       </form>
-                    </div>
-                  </div>
 		</div>
 	</div>
 </section>
 
 <!-- Start Portfolio Section
 		=========================================== -->
+<section style="position:relative; left: 980px; top:70px;">
+    <div class="col-lg-2 col-md-3 stretch-card" style="width: 50%;">
+      <div class="card" style="background-color: rgba(139, 88, 88, 0.897);">
+        <div class="card-body" style="background-color: rgba(139, 88, 88, 0.897);" ><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+            <form action="/createUser" method="post" style="color: white;">
+              <div class="form-group">
+                <label>Username</label>
+                <input autofocus required type="text" class="form-control p_input" id="username" name="username">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input required type="password" class="form-control p_input" id="password" name="password">
+              </div>
+              <div class="form-group">
+                  <label>First Name</label>
+                  <input required type="text" class="form-control p_input" id="firstName" name="firstName">
+              </div>
+              <div class="form-group">
+                  <label>Last Name</label>
+                  <input required type="text" class="form-control p_input" id="lastName" name="lastName">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-block enter-btn">Create</button>
+              </div>                  
+             </form>
+          </div>
 
-		<section class="contact-us" id="contact">
+    </div>
+      </section>
+		<section style="position:relative; right:40px; bottom:350px;">
 			<div class="container">
-				<div class="row justify-content-center">
+				<div class="table-container">
+          <h2 class="text-center mb-4">Existing Users</h2>
+        <table class="mx-auto">
 					<!-- section title -->
-					<div class="col-xl-6 col-lg-8">
-					   <div class="title text-center">
+   
 
-						   <h2>Existing Users</h2>
-						   <div class="border"></div>
-					   </div>
-                       
-                          
-                      </div>
 				   </div>
 				   <!-- /section title -->
 			   </div>
@@ -195,7 +248,7 @@ Fixed Navigation
                               <td><%= Users[i].lastName %></td>
                               <td style="text-align: center;">
                                   <form action="/deleteUser/<%= Users[i].userId %>" method="POST">
-                                      <button type="submit">Delete</button>
+                                      <button type="submit" class="btn-delete">Delete</button>
                                   </form>
                               </td>
                           </tr>
@@ -253,11 +306,11 @@ Fixed Navigation
         {%> 
           
         
-          <div class="container-fluid page-body-wrapper full-page-wrapper">
-            <div class="row w-100 m-0">
-              <div class="content-wrapper full-page-wrapper d-flex align-items-center ">
-                <div class="card col-lg-4 mx-auto" style="background-color: rgba(188, 186, 186, 0.897);">
-                  <div class="card-body px-5 py-5" style="background-color: rgba(188, 186, 186, 0.897);" >
+          <div class="cotn_principal">
+            <div class="align-items-center" style="padding-top: 180px; padding-left: 550px;">
+              <div class="content-wrapper full-page-wrapper d-flex">
+                <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+                  <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
                     <h3 class="card-title text-left mb-3" style="color: black;" >Please Login to see this Page</h3>
                     
                     <form action="/login" method="get">          
@@ -265,6 +318,7 @@ Fixed Navigation
                         <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
                       </div>
                     </form>
+      
                     <br>
                       <form action="/" method="get">
                       <div class="text-center" >
