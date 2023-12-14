@@ -59,6 +59,17 @@ app.get('/report', (req, res) => {
   res.render('report');
 })
 
+app.get('/createUser', (req, res) => {
+  knex.select().from('Users').then(Users => {
+    let loggedIn = req.session.loggedIn || 'false';
+    let edit = req.session.edit || 'false';
+    res.render('createUser', {Users: Users, loggedIn: loggedIn, edit: edit});
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json({err});
+  });
+})
+
 app.get('/seeRequests', (req, res) => {
   knex.select().from('Requests').then(Requests => {
     let loggedIn = req.session.loggedIn || 'false';
@@ -149,6 +160,20 @@ app.post('/logout', (req, res) => {
   res.redirect('/')
 })
 
+app.post('/createUser', (req, res) => {
+  knex('Users').insert(req.body).then( users => {
+      res.redirect('/createUser');
+  })
+});
+
+app.post('/deleteUser/:id', ( req, res) => {
+  knex('Users').where('userId', req.params.id).del().then(Users => {
+      res.redirect('/createUser');
+  }).catch(err => {
+      console.log(err);
+      res.status(500).json({err});
+  })
+});
 
 // Handle 404 errors
 app.use((req, res) => {

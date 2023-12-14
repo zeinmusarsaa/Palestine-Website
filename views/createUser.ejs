@@ -118,11 +118,36 @@ Fixed Navigation
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<h2>Create User</h2>
 				<ol class="breadcrumb header-bradcrumb justify-content-center">
-          <form action="/createUser" method="get"><button class="btn btn-lg btn-outline-danger" style="color: rgba(139, 88, 88, 0.897); font-weight: bold; font-size: xx-large;" type="submit">Edit Users</button></form>
-
 				</ol>
 			</div>
+            <div class=" grid-margin stretch-card mx-auto" style="width: 50%;">
+                <div class="card" style="background-color: rgba(139, 88, 88, 0.897);">
+                  <div class="card-body" style="background-color: rgba(139, 88, 88, 0.897);" ><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                      <form action="/createUser" method="post" style="color: white;">
+                        <div class="form-group">
+                          <label>Username</label>
+                          <input autofocus required type="text" class="form-control p_input" id="username" name="username">
+                        </div>
+                        <div class="form-group">
+                          <label>Password</label>
+                          <input required type="password" class="form-control p_input" id="password" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input required type="text" class="form-control p_input" id="firstName" name="firstName">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input required type="text" class="form-control p_input" id="lastName" name="lastName">
+                        </div>
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-primary btn-block enter-btn">Create</button>
+                        </div>                  
+                       </form>
+                    </div>
+                  </div>
 		</div>
 	</div>
 </section>
@@ -137,49 +162,47 @@ Fixed Navigation
 					<div class="col-xl-6 col-lg-8">
 					   <div class="title text-center">
 
-						   <h2>Existing Requests for Aid</h2>
+						   <h2>Existing Users</h2>
 						   <div class="border"></div>
 					   </div>
+                       
+                          
+                      </div>
 				   </div>
 				   <!-- /section title -->
 			   </div>
 			</div> <!-- end container -->
 
-            <table class="mx-auto">
-                <thead>
-                    <tr>
-                        <th>FormID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Aid Requested</th>
-                        <th>City</th>
-                        <th>Phone</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% for (let i = 0; i < Requests.length; i++){ %>
-                        <tr>
-                            <td><%= Requests[i].formId %></td>
-                            <td><%= Requests[i].firstName %></td>
-                            <td><%= Requests[i].lastName %></td>
-                            <td><%= Requests[i].aidType %></td>
-                            <td><%= Requests[i].city %></td>
-                            <td><%= Requests[i].phone %></td>
-                            <td style="text-align: center;"> 
-                                <form action="/editReq/<%= Requests[i].formId %>" method="get">
-                                    <button type="submit">Edit</button>
-                                </form>
-                            </td>
-                            <td style="text-align: center;">
-                                <form action="/deleteReq/<%= Requests[i].formId %>" method="POST">
-                                    <button type="submit">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                    <% } %>
-                </tbody>
-            </table>
-
+            
+            <div class="table-responsive">
+                <table class="mx-auto">
+                  <thead>
+                      <tr>
+                          <th>User Id</th>
+                          <th>UserName</th>
+                          <th>Password</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% for (let i = 0; i < Users.length; i++){ %>
+                          <tr>
+                              <td><%= Users[i].userId %></td>
+                              <td><%= Users[i].username %></td>
+                              <td><%= Users[i].password %></td>
+                              <td><%= Users[i].firstName %></td>
+                              <td><%= Users[i].lastName %></td>
+                              <td style="text-align: center;">
+                                  <form action="/deleteUser/<%= Users[i].userId %>" method="POST">
+                                      <button type="submit">Delete</button>
+                                  </form>
+                              </td>
+                          </tr>
+                      <% } %>
+                  </tbody>
+              </table>
+            </div>
 
 		</section> <!-- end section -->
 		<footer id="footer" class="bg-one">
@@ -294,3 +317,17 @@ Fixed Navigation
 </body>
 
 </html>
+
+<!-- create user:
+
+
+
+knex.select().from('Users').then(Users => {
+    let loggedIn = req.session.loggedIn || 'false';
+    let edit = req.session.edit || 'false';
+    res.render('seeRequests', {Users: Users, loggedIn: loggedIn, edit: edit});
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json({err});
+  });
+-->
