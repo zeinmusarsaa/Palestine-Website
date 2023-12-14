@@ -9,29 +9,6 @@
 
 <html lang="en">
   <style>
-        table {
-          width: 80%;
-          border-collapse: collapse;
-          margin-top: 20px;
-        }
-
-        th, td {
-            padding: 15px;
-
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-        .btn-edit, .btn-delete {
-        padding: 8px 12px;
-        margin: 4px;
-        font-size: 14px;
-        cursor: pointer;
-    }
-
     .btn-edit {
         background-color: #1f7d27;
         color: #fff;
@@ -196,51 +173,52 @@ Fixed Navigation
 			   </div>
 			</div> <!-- end container -->
 
-            <table class="mx-auto">
-                <thead>
-                    <tr>
+      <div class="table-responsive" style="height: 300px; overflow-y: auto;">
+        <table class="mx-auto table table-striped" style="width: 75%;">
+          <thead>
+              <tr>
 
 
-                      <th>FormId</th>
+                <th>FormId</th>
 
 
 
 
-                        <th>First Name</th>
+                  <th>First Name</th>
 
-                        <th>Last Name</th>
+                  <th>Last Name</th>
 
-                        <th>Aid Requested</th>
+                  <th>Aid Requested</th>
 
-                        <th>City</th>
+                  <th>City</th>
 
-                        <th>Phone</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% for (let i = 0; i < Requests.length; i++){ %>
-                        <tr>
-                            <td><%= Requests[i].formId %></td>
-                            <td><%= Requests[i].firstName %></td>
-                            <td><%= Requests[i].lastName %></td>
-                            <td><%= Requests[i].aidType %></td>
-                            <td><%= Requests[i].city %></td>
-                            <td><%= Requests[i].phone %></td>
-                            <td style="text-align: center;"> 
-                                <form action="/editReq/<%= Requests[i].formId %>" method="get">
-                                    <button class="btn-block btn-edit" type="submit">Edit</button>
-                                </form>
-                            </td>
-                            <td style="text-align: center;">
-                                <form action="/deleteReq/<%= Requests[i].formId %>" method="POST">
-                                    <button class="btn-block btn-delete" type="submit">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                    <% } %>
-                </tbody>
-            </table>
-
+                  <th>Phone</th>
+              </tr>
+          </thead>
+          <tbody>
+              <% for (let i = 0; i < Requests.length; i++){ %>
+                  <tr>
+                      <td><%= Requests[i].formId %></td>
+                      <td><%= Requests[i].firstName %></td>
+                      <td><%= Requests[i].lastName %></td>
+                      <td><%= Requests[i].aidType %></td>
+                      <td><%= Requests[i].city %></td>
+                      <td><%= Requests[i].phone %></td>
+                      <td style="text-align: center;"> 
+                          <form action="/editReq/<%= Requests[i].formId %>" method="get">
+                              <button class="btn-block btn-edit" type="submit">Edit</button>
+                          </form>
+                      </td>
+                      <td style="text-align: center;">
+                          <form action="/deleteReq/<%= Requests[i].formId %>" method="POST">
+                              <button class="btn-block btn-delete" type="submit">Delete</button>
+                          </form>
+                      </td>
+                  </tr>
+              <% } %>
+          </tbody>
+        </table>
+      </div>
 
 		</section> <!-- end section -->
 		<footer id="footer" class="bg-one">
