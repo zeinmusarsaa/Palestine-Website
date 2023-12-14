@@ -145,16 +145,14 @@ Fixed Navigation
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>See Requests</h2>
-				<ol class="breadcrumb header-bradcrumb justify-content-center mx-auto">
-					<li class="breadcrumb-item"><a href="/createUser" class="text-white">See existing/Create User</a></li>
+				<ol class="breadcrumb header-bradcrumb justify-content-center">
+          <form action="/createUser" method="get"><button class="btn btn-lg btn-outline-danger" style="color: white; font-weight: bold; font-size: x-large;" type="submit">Users</button></form>
+
 				</ol>
 			</div>
 		</div>
 	</div>
 </section>
-
-
 
 <!-- Start Portfolio Section
 		=========================================== -->
@@ -167,7 +165,6 @@ Fixed Navigation
 					   <div class="title text-center">
 
 						   <h2>Existing Requests for Aid</h2>
-               <p class="text-danger">Please Refresh to see changes made in requests*</p>
 						   <div class="border"></div>
 					   </div>
 				   </div>
@@ -277,15 +274,15 @@ Fixed Navigation
                     <h3 class="card-title text-left mb-3" style="color: black;" >Please Login to see this Page</h3>
                     
                     <form action="/login" method="get">          
-                      <div class="cf-submit" >
-                        <button type="submit" class="btn btn-transparent">Login</button>
+                      <div class="text-center" >
+                        <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
                       </div>
                     </form>
       
                     <br>
                       <form action="/" method="get">
-                      <div class="cf-submit" >
-                        <button type="submit" class="btn btn-transparent">Return to Home</button>
+                      <div class="text-center" >
+                        <button type="submit" class="btn btn-primary btn-block enter-btn">Return to Home</button>
                       </div>
                     </form>
                   </div>

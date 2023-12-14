@@ -150,7 +150,7 @@ app.post('/login', (req, res) => {
 
 app.post('/enter', (req, res) => {
   knex('Requests').insert(req.body).then( Requests => {
-      res.redirect('/seeRequests');
+      res.redirect('/');
   })
 });
 
