@@ -42,6 +42,13 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+  <style>
+    .btn-delete {
+        background-color: #50050d;
+        color: #fff;
+        border: none;
+    }
+  </style>
 
 </head>
 <body id="body">
@@ -49,6 +56,12 @@
   <!--
   Start Preloader
   ==================================== -->
+
+  <!--
+  End Fixed Navigation
+  ==================================== -->
+<% if (loggedIn == 'true') { 
+	%>  
   <div id="preloader">
     <div class='preloader'>
       <span></span>
@@ -108,11 +121,6 @@ Fixed Navigation
 	  <!-- /main nav -->
 	</div>
   </header>
-  <!--
-  End Fixed Navigation
-  ==================================== -->
-<% if (loggedIn == 'true') { 
-	%>  
 
 <section class="single-page-header">
 	<div class="container">
@@ -195,7 +203,7 @@ Fixed Navigation
                               <td><%= Users[i].lastName %></td>
                               <td style="text-align: center;">
                                   <form action="/deleteUser/<%= Users[i].userId %>" method="POST">
-                                      <button type="submit">Delete</button>
+                                      <button class="btn-delete" type="submit">Delete</button>
                                   </form>
                               </td>
                           </tr>
@@ -250,14 +258,12 @@ Fixed Navigation
 		<% } 
                 
         else 
-        {%> 
-          
-        
-          <div class="container-fluid page-body-wrapper full-page-wrapper">
-            <div class="row w-100 m-0">
-              <div class="content-wrapper full-page-wrapper d-flex align-items-center ">
-                <div class="card col-lg-4 mx-auto" style="background-color: rgba(188, 186, 186, 0.897);">
-                  <div class="card-body px-5 py-5" style="background-color: rgba(188, 186, 186, 0.897);" >
+        {%>         
+          <div class="cotn_principal">
+            <div class="align-items-center" style="padding-top: 180px; padding-left: 550px;">
+              <div class="content-wrapper full-page-wrapper d-flex">
+                <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+                  <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
                     <h3 class="card-title text-left mb-3" style="color: black;" >Please Login to see this Page</h3>
                     
                     <form action="/login" method="get">          
@@ -265,6 +271,7 @@ Fixed Navigation
                         <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
                       </div>
                     </form>
+      
                     <br>
                       <form action="/" method="get">
                       <div class="text-center" >

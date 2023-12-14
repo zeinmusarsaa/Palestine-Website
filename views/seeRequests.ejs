@@ -20,7 +20,6 @@
         color: #fff;
         border: none;
     }
-    
   </style>
   
 <head>
@@ -61,7 +60,11 @@
 </head>
 <body id="body">
 
-  <!--
+  
+<% if (loggedIn == 'true') { 
+	%>  
+
+<!--
   Start Preloader
   ==================================== -->
   <div id="preloader">
@@ -126,9 +129,6 @@ Fixed Navigation
   <!--
   End Fixed Navigation
   ==================================== -->
-<% if (loggedIn == 'true') { 
-	%>  
-
 <!-- <section class="single-page-header">
 	<div class="container">
 		<div class="row">
@@ -141,13 +141,12 @@ Fixed Navigation
 		</div>
 	</div>
 </section> -->
-
 <section class="single-page-header">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb header-bradcrumb justify-content-center">
-          <form action="/createUser" method="get"><button class="btn btn-lg btn-outline-danger" style="color: rgba(139, 88, 88, 0.897); font-weight: bold; font-size: xx-large;" type="submit">View/Edit Users</button></form>
+          <form action="/createUser" method="get"><button class="btn btn-lg btn-outline-danger" style="color: white; font-weight: bold; font-size: x-large;" type="submit">Users</button></form>
 
 				</ol>
 			</div>

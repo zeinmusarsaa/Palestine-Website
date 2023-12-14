@@ -46,6 +46,8 @@
 </head>
 <body id="body">
 
+<% if (loggedIn == 'true') { 
+	%>  
   <!--
   Start Preloader
   ==================================== -->
@@ -220,7 +222,41 @@ Fixed Navigation
 		</div>
 	  </footer> <!-- end footer -->
 	  
-
+	  <% } 
+                
+	  else 
+        {%>         
+          <div class="cotn_principal">
+            <div class="align-items-center" style="padding-top: 180px; padding-left: 550px;">
+              <div class="content-wrapper full-page-wrapper d-flex">
+                <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+                  <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
+                    <h3 class="card-title text-left mb-3" style="color: black;" >Please Login to see this Page</h3>
+                    
+                    <form action="/login" method="get">          
+                      <div class="text-center" >
+                        <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                      </div>
+                    </form>
+      
+                    <br>
+                      <form action="/" method="get">
+                      <div class="text-center" >
+                        <button type="submit" class="btn btn-primary btn-block enter-btn">Return to Home</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- content-wrapper ends -->
+            </div>
+            <!-- row ends -->
+          </div>
+          <!-- page-body-wrapper ends -->
+        
+            
+        <% }
+   %>
 
 <!-- end Footer Area
 ========================================== -->
