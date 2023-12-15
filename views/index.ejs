@@ -1,3 +1,10 @@
+<!-- Ezekiel Goodman, Benjamin Zapata, Fletcher Williams, Zein Mosaarsa
+section 4 group 13
+this is a website designed to help victims of the war in palestine. it has some 
+info about palestine, a form to request help, and users who have logged in
+can go and see what requests have been made so that they know how to help
+if they want to organize charitable operations -->
+
 <!DOCTYPE html>
 
 <!--
@@ -12,11 +19,13 @@
 
   <!-- Basic Page Needs
   ================================================== -->
+  <!-- Document metadata and character set -->
   <meta charset="utf-8">
   <title>Palestine: A Cultural View</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
+  <!-- Compatibility settings and viewport configuration -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="One page parallax responsive HTML Template">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -45,9 +54,9 @@
 </head>
 <body id="body">
 
-  <!--
-  Start Preloader
+  <!-- Start Preloader
   ==================================== -->
+  <!-- Display preloader animation while page is loading -->
   <div id="preloader">
     <div class='preloader'>
       <span></span>
@@ -58,253 +67,210 @@
       <span></span>
     </div>
   </div>
-  <!--
-  End Preloader
+  <!-- End Preloader
   ==================================== -->
 
-<!--
-Fixed Navigation
-==================================== -->
-<header class="navigation fixed-top">
-  <div class="container">
-    <!-- main nav -->
-    <nav class="navbar navbar-expand-lg navbar-light px-0">
-      <!-- logo -->
-      <a class="navbar-brand logo" href="/">
-		<img loading="lazy" class="logo-white" src="images/logo.png" alt="logo" width="50" height="50" />
-		<img loading="lazy" class="logo-default" src="https://i.pinimg.com/564x/ea/10/42/ea1042321bb4365ca553d890c2417d1b.jpg" alt="logo" width="50" height="50" />
-		
-      </a>
-      <!-- /logo -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav ml-auto text-center">
-        <li class = "nav-item" id="home">
-          <a class="nav-link" href="#">Homepage</a>
-        </li>
-        <li class="nav-item" id="about">
-          <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item" id="palestine">
-          <a class="nav-link" href="#">Palestine</a>
-          </li>
-          <li class="nav-item" id="support">
-          <a class="nav-link"  href="#">Support</a>
-          </li>
-          <li class="nav-item" id="login">
-            <a class="nav-link"  href="#">Users</a>
-          </li>
-          <li class="nav-item" id="logout">
-            <a class="nav-link" id="logout-link" href="#">Logout</a>
-          </li>
-        </ul>
-      </div>
-      </nav>
-    <!-- /main nav -->
-  </div>
-</header>
-<!--
-End Fixed Navigation
-==================================== -->
-
-<div class="hero-slider">
-	<div class="slider-item th-fullpage hero-area" style="background-image: url(https://d7rm5xoig729r.cloudfront.net/collectiveaccess/images/1/3/55297_ca_object_representations_media_1300_large.jpg);">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Palestine History and Culture<br>
-					</h1>
-					<p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">This webpage introduces Palestine from a historical and cultural perspective and <br>
-            Provides a resource to request aid for those suffering from the war
-						 <br></p>
-					<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
-						href="/about">Learn More About Us!</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="slider-item th-fullpage hero-area" style="background-image: url(https://d7rm5xoig729r.cloudfront.net/collectiveaccess/images/1/3/38342_ca_object_representations_media_1312_large.jpg);">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Photos <br> and
-						Culture</h1>
-					<p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5"> Historical photos pulled
-						from the Palestinian Digital Archive</p>
-					<a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
-						href="https://palarchive.org/" target = "_blank">Visit the archive</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!--
-Start About Section
-==================================== -->
-<section class="service-2 section">
-  <div class="container">
-    <div class="row justify-content-center">
-
-      <div class="col-lg-6">
-        <!-- section title -->
-        <div class="title text-center">
-          <h2>Why are we doing this?</h2>
-          <div class="border"></div>
-
-
-        </div>
-        <!-- /section title -->
-      </div>
-    </div>
-    <div class="row">
-
-      <div class="col-md-4 text-center d-none d-md-block">
-        <img loading="lazy" src="https://d7rm5xoig729r.cloudfront.net/collectiveaccess/images/1/1/9/8/56355_ca_object_representations_media_119835_large.jpg" class="img-fluid inline-block" alt="">
-      </div>
-      <div class="col-md-8">
-        <div class="row text-center">
-          <div class="col-md-6 col-sm-6">
-            <div class="service-item">
-				<i class="tf-ion-ios"><span>&#9998;</span></i>
-              <h4>Preserve culture and history</h4>
-            </div>
-          </div><!-- END COL -->
-          <div class="col-md-6 col-sm-6">
-            <div class="service-item">
-              <i class="tf-ion-ios-search-strong"></i>
-              <h4>Showcase who Palestinians are</h4>
-            </div>
-          </div><!-- END COL -->
-          <div class="col-md-6 col-sm-6">
-            <div class="service-item">
-              <i class="tf-ion-ios"><span>&#9996;</span></i>
-              <h4>Show support to refugees suffering globally</h4>
-            </div>
-          </div><!-- END COL -->
-          <div class="col-md-6 col-sm-6">
-            <div class="service-item">
-              <i class="tf-ion-ios-book-outline"></i>
-              <h4>Spread awareness of refugee needs</h4>
-            </div>
-          </div><!-- END COL -->
-        </div>
-      </div>
-    </div> <!-- End row -->
-  </div> <!-- End container -->
-</section> <!-- End section -->
-
-<!--
-Start About Section
-==================================== -->
-
-<footer id="footer" class="bg-one">
-  <div class="top-footer">
+  <!-- Fixed Navigation Bar
+  ==================================== -->
+  <header class="navigation fixed-top">
     <div class="container">
-      <div class="row justify-content-around">
-        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-          <h3>about</h3>
-          <p>The richness of the history and culture of Palestine is still preserved today, this website showcases this beautiful history.</p>
-        </div>
-        <!-- End of .col-sm-3 -->
+      <!-- Main navigation bar -->
+      <nav class="navbar navbar-expand-lg navbar-light px-0">
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="/">
+          <img loading="lazy" class="logo-white" src="images/logo.png" alt="logo" width="50" height="50" />
+          <img loading="lazy" class="logo-default" src="https://i.pinimg.com/564x/ea/10/42/ea1042321bb4365ca553d890c2417d1b.jpg" alt="logo" width="50" height="50" />
+        </a>
+        <!-- /Logo -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-			<ul>
-				<li>
-				  <h3>Quick Links</h3>
-				</li>
-				<li><a href="/palestine">About</a></li>
-				<li><a href="/palestine">Palestine</a></li>
-			  </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-        <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
-          <ul>
-            <li>
-            <h3>Connect with the IS Department</h3>
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ml-auto text-center">
+            <!-- Navigation items -->
+            <li class="nav-item" id="home">
+              <a class="nav-link" href="#">Homepage</a>
             </li>
-            <li><a href="https://marriott.byu.edu/infosys/">Marriott School Website</a></li>
-            <li><a href="https://marriott.byu.edu/infosys/admissions/bsis/admission-criteria/">Admissions Information</a></li>
-            <li><a href="https://ais.byu.edu/">AIS Webpage</a></li>
+            <li class="nav-item" id="about">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item" id="palestine">
+              <a class="nav-link" href="#">Palestine</a>
+            </li>
+            <li class="nav-item" id="support">
+              <a class="nav-link" href="#">Support</a>
+            </li>
+            <li class="nav-item" id="login">
+              <a class="nav-link" href="#">Users</a>
+            </li>
+            <li class="nav-item" id="logout">
+              <a class="nav-link" id="logout-link" href="#">Logout</a>
+            </li>
           </ul>
         </div>
-        <!-- End of .col-sm-3 -->
+      </nav>
+      <!-- /Main navigation bar -->
+    </div>
+  </header>
+  <!-- End Fixed Navigation Bar
+  ==================================== -->
 
+  <!-- Hero Slider Section -->
+  <div class="hero-slider">
+    <!-- First Slider Item -->
+    <div class="slider-item th-fullpage hero-area" style="background-image: url(https://d7rm5xoig729r.cloudfront.net/collectiveaccess/images/1/3/55297_ca_object_representations_media_1300_large.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <!-- Title and description for the first slider item -->
+            <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Palestine History and Culture<br></h1>
+            <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">This webpage introduces Palestine from a historical and cultural perspective and
+              provides a resource to request aid for those suffering from the war<br></p>
+            <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="/about">Learn More About Us!</a>
+          </div>
+        </div>
       </div>
-    </div> <!-- end container -->
+    </div>
+    <!-- Second Slider Item -->
+    <div class="slider-item th-fullpage hero-area" style="background-image: url(https://d7rm5xoig729r.cloudfront.net/collectiveaccess/images/1/3/38342_ca_object_representations_media_1312_large.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <!-- Title and description for the second slider item -->
+            <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Photos <br> and Culture</h1>
+            <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5"> Historical photos pulled from the Palestinian Digital Archive</p>
+            <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main" href="https://palarchive.org/" target="_blank">Visit the archive</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom">
-    <h5>&copy; Copyright 2023. All rights reserved.</h5>
-  </div>
-</footer> <!-- end footer -->
 
+  <!-- Start About Section
+  ==================================== -->
+  <section class="service-2 section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <!-- Section title -->
+          <div class="title text-center">
+            <h2>Why are we doing this?</h2>
+            <div class="border"></div>
+          </div>
+          <!-- /Section title -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-center d-none d-md-block">
+          <!-- Image for the "Why are we doing this?" section -->
+          <img loading="lazy" src="https://d7rm5xoig729r.cloudfront.net/collectiveaccess/images/1/1/9/8/56355_ca_object_representations_media_119835_large.jpg" class="img-fluid inline-block" alt="">
+        </div>
+        <div class="col-md-8">
+          <div class="row text-center">
+            <!-- Four service items explaining the purpose -->
+            <div class="col-md-6 col-sm-6">
+              <div class="service-item">
+                <i class="tf-ion-ios"><span>&#9998;</span></i>
+                <h4>Preserve culture and history</h4>
+              </div>
+            </div><!-- END COL -->
+            <div class="col-md-6 col-sm-6">
+              <div class="service-item">
+                <i class="tf-ion-ios-search-strong"></i>
+                <h4>Showcase who Palestinians are</h4>
+              </div>
+            </div><!-- END COL -->
+            <div class="col-md-6 col-sm-6">
+              <div class="service-item">
+                <i class="tf-ion-ios"><span>&#9996;</span></i>
+                <h4>Show support to refugees suffering globally</h4>
+              </div>
+            </div><!-- END COL -->
+            <div class="col-md-6 col-sm-6">
+              <div class="service-item">
+                <i class="tf-ion-ios-book-outline"></i>
+                <h4>Spread awareness of refugee needs</h4>
+              </div>
+            </div><!-- END COL -->
+          </div>
+        </div>
+      </div> <!-- End row -->
+    </div> <!-- End container -->
+  </section> <!-- End section -->
 
-<!-- end Footer Area
-========================================== -->
-<!-- 
-    Essential Scripts
-    =====================================-->
-<!-- Main jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Start About Section
+  ==================================== -->
 
-<!-- Bootstrap4 -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<!-- Parallax -->
-<script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
-<!-- lightbox -->
-<script src="plugins/lightbox2/js/lightbox.min.js"></script>
-<!-- Owl Carousel -->
-<script src="plugins/slick/slick.min.js"></script>
-<!-- filter -->
-<script src="plugins/filterizr/jquery.filterizr.min.js"></script>
-<!-- Smooth Scroll js -->
-<script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
+  <!-- Footer Section -->
+  <footer id="footer" class="bg-one">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <!-- About section in the footer -->
+            <h3>about</h3>
+            <p>The richness of the history and culture of Palestine is still preserved today; this website showcases this beautiful history.</p>
+          </div>
+          <!-- End of .col-sm-3 -->
 
-<!-- Custom js -->
-<script src="js/script.js"></script>
-<script src="/js/triggers.js"></script>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <!-- Quick Links section in the footer -->
+            <ul>
+              <li>
+                <h3>Quick Links</h3>
+              </li>
+              <li><a href="/palestine">About</a></li>
+              <li><a href="/palestine">Palestine</a></li>
+            </ul>
+          </div>
+          <!-- End of .col-sm-3 -->
+
+          <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+            <!-- Connect with the IS Department section in the footer -->
+            <ul>
+              <li>
+                <h3>Connect with the IS Department</h3>
+              </li>
+              <li><a href="https://marriott.byu.edu/infosys/">Marriott School Website</a></li>
+              <li><a href="https://marriott.byu.edu/infosys/admissions/bsis/admission-criteria/">Admissions Information</a></li>
+              <li><a href="https://ais.byu.edu/">AIS Webpage</a></li>
+            </ul>
+          </div>
+          <!-- End of .col-sm-3 -->
+        </div>
+      </div> <!-- End container -->
+    </div>
+    <div class="footer-bottom">
+      <!-- Copyright information -->
+      <h5>&copy; Copyright 2023. All rights reserved.</h5>
+    </div>
+  </footer> <!-- End footer -->
+
+  <!-- Essential Scripts
+  =====================================-->
+  <!-- Main jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap4 -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- Parallax -->
+  <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
+  <!-- Lightbox -->
+  <script src="plugins/lightbox2/js/lightbox.min.js"></script>
+  <!-- Owl Carousel -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- Filterizr -->
+  <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+  <!-- Smooth Scroll -->
+  <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
+
+  <!-- Custom js -->
+  <script src="js/script.js"></script>
+  <script src="/js/triggers.js"></script>
 
 </body>
 
 </html>
-
-<!-- href link navigation bar:
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav ml-auto text-center">
-		  <li class = "nav-item">
-			<a class="nav-link" href = "#" id="index">Homepage</a>
-		  </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/about" id="about">About Us</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/palestine" id="palestine">Palestine</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/support" id="support">Support</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-		  
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    -- /main nav --
-    </div>
-</header>
- -->

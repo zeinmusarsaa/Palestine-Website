@@ -40,6 +40,9 @@
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom CSS -->
+
  <style>
   .btn-outline {
     border-color: #50050d;
@@ -84,6 +87,8 @@ Fixed Navigation
           <span class="navbar-toggler-icon"></span>
         </button>
   
+                <!-- Navigation links -->
+
         <div class="collapse navbar-collapse" id="navigation">
           <ul class="navbar-nav ml-auto text-center">
           <li class = "nav-item" id="home">
@@ -110,10 +115,13 @@ Fixed Navigation
       <!-- /main nav -->
     </div>
   </header>
+    <!-- Conditional rendering of content based on the 'loggedIn' variable -->
+
   <% if (loggedIn == 'true') 
   { %>
 
-    
+        <!-- Content for logged-in users -->
+
     <div class="cotn_principal justify-content-center" >
       <div class="align-items-center" style="padding-top: 180px; padding-right: 340px;">
         <div class="content-wrapper full-page-wrapper d-flex">
@@ -141,6 +149,8 @@ Fixed Navigation
   <% }
   else if (loggedIn == 'username')
   { %>
+        <!-- Content for users with incorrect username -->
+
     <div class="cotn_principal justify-content-center" >
       <div class="align-items-center" style="padding-top: 180px; padding-right: 340px;">
         <div class="content-wrapper full-page-wrapper d-flex">
@@ -172,6 +182,8 @@ Fixed Navigation
   <% }
   else if (loggedIn == 'password')
   { %>
+        <!-- Content for users with incorrect password -->
+
     <div class="cotn_principal justify-content-center" >
       <div class="align-items-center" style="padding-top: 180px; padding-right: 340px;">
         <div class="content-wrapper full-page-wrapper d-flex">
@@ -202,6 +214,8 @@ Fixed Navigation
       <!-- page-body-wrapper ends -->
   <% }
   
+      <!-- Default content for users not logged in -->
+
   else 
   {%>
     <div class="cotn_principal justify-content-center" >

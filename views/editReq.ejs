@@ -12,11 +12,13 @@
 
   <!-- Basic Page Needs
   ================================================== -->
+  <!-- Document metadata and character set -->
   <meta charset="utf-8">
   <title>Palestine</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
+  <!-- Compatibility settings and viewport configuration -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="One page parallax responsive HTML Template">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -40,17 +42,16 @@
   <link rel="stylesheet" href="/plugins/slick/slick.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Bootstrap v5.3.2 CSS from CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
 
 </head>
 <body id="body">
 
-<% if (loggedIn == 'true') { 
-	%>  
-  <!--
-  Start Preloader
+<% if (loggedIn == 'true') { %>
+  <!-- Start Preloader
   ==================================== -->
+  <!-- Display preloader animation if user is logged in -->
   <div id="preloader">
     <div class='preloader'>
       <span></span>
@@ -61,208 +62,204 @@
       <span></span>
     </div>
   </div>
-  <!--
-  End Preloader
+  <!-- End Preloader
   ==================================== -->
 
-<!--
-Fixed Navigation
-==================================== -->
-<header class="navigation fixed-top">
-	<div class="container">
-	  <!-- main nav -->
-	  <nav class="navbar navbar-expand-lg navbar-light px-0">
-		<!-- logo -->
-		<a class="navbar-brand logo" href="/">
-			<img loading="lazy" class="logo-white" src="/images/logo.png" alt="logo" width="50" height="50" />
-			<img loading="lazy" class="logo-default" src="https://i.pinimg.com/564x/ea/10/42/ea1042321bb4365ca553d890c2417d1b.jpg" alt="logo" width="50" height="50" />
-			
-		  </a>
-		<!-- /logo -->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-		  aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-  
-		<div class="collapse navbar-collapse" id="navigation">
-		  <ul class="navbar-nav ml-auto text-center">
-			<li class = "nav-item">
-			  <a class="nav-link" href ="/">Homepage</a>
-			</li>
-			<li class="nav-item ">
-				<a class="nav-link" href="/about">About Us</a>
-			  </li>
-			  <li class="nav-item ">
-				<a class="nav-link" href="/palestine">Palestine</a>
-			  </li>
-			  <li class="nav-item ">
-				<a class="nav-link" href="/support">Support</a>
-			  </li>
-			  <li class="nav-item" id="login">
-				<a class="nav-link"  href="#">Users</a>
-			</li>
-			  <li class="nav-item" id="logout">
-				<a class="nav-link" id="logout-link" href="#">Logout</a>
-			  </li>
-		  </ul>
-		</div>
-	  </nav>
-	  <!-- /main nav -->
-	</div>
+  <!-- Fixed Navigation Bar
+  ==================================== -->
+  <header class="navigation fixed-top">
+    <div class="container">
+      <!-- Main navigation bar -->
+      <nav class="navbar navbar-expand-lg navbar-light px-0">
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="/">
+          <img loading="lazy" class="logo-white" src="/images/logo.png" alt="logo" width="50" height="50" />
+          <img loading="lazy" class="logo-default" src="https://i.pinimg.com/564x/ea/10/42/ea1042321bb4365ca553d890c2417d1b.jpg" alt="logo" width="50" height="50" />
+        </a>
+        <!-- /Logo -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ml-auto text-center">
+            <!-- Navigation items -->
+            <li class = "nav-item">
+              <a class="nav-link" href ="/">Homepage</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/palestine">Palestine</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/support">Support</a>
+            </li>
+            <li class="nav-item" id="login">
+              <a class="nav-link"  href="#">Users</a>
+            </li>
+            <li class="nav-item" id="logout">
+              <a class="nav-link" id="logout-link" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- /Main navigation bar -->
+    </div>
   </header>
-  <!--
-  End Fixed Navigation
+  <!-- End Fixed Navigation Bar
   ==================================== -->
-  
 
-<section class="single-page-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Request Aid</h2>
-				<ol class="breadcrumb header-bradcrumb justify-content-center">
+  <!-- Section for the page header -->
+  <section class="single-page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Page title and breadcrumb navigation -->
+          <h2>Request Aid</h2>
+          <ol class="breadcrumb header-bradcrumb justify-content-center">
 
-				</ol>
-			</div>
-		</div>
-	</div>
-</section>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Start Portfolio Section
-		=========================================== -->
-
-		<section class="contact-us" id="contact">
-			<div class="container">
-				<div class="row justify-content-center">
-					<!-- section title -->
-					<div class="col-xl-6 col-lg-8">
-					   <div class="title text-center">
-
-						<h2>Edit an Existing Request</h2>
-						<div class="border"></div>
-                           <form id="contact-form" action="/saveEdits/<%= Request[0].formId %>" method="post" role="form">
-								<div class="form-group mb-4">
-									<input type="text" placeholder="Your First Name" class="form-control" name="firstName" id="firstName" value="<%= Request[0].firstName %>" required>
-								</div>
-
-								<div class="form-group mb-4">
-									<input type="text" placeholder="Your Last Name" class="form-control" name="lastName" id="lastName" value="<%= Request[0].lastName %>" required>
-								</div>
-
-								<div class="form-group mb-4">
-									<input type="text" placeholder="Your City" class="form-control" name="city" id="city" value="<%= Request[0].city %>"required>
-								</div>
-
-								<div class="form-group mb-4">
-									<input type="text" placeholder="Your Phone Number" class="form-control" name="phone" id="phone=" value="<%= Request[0].phone %>" required>
-								</div>
-								
-								<div class="form-group mb-4">
-									<label for="aidType">Type of Aid Needed:</label>
-									<select id="aidType" name="aidType" required>
-										<option value="water" <% if (Request[0].aidType === "water") { %>selected<% } %>>Water</option>
-										<option value="food" <% if (Request[0].aidType === "food") { %>selected<% } %>>Food</option>
-										<option value="medicalSupplies" <% if (Request[0].aidType === "medicalSupplies") { %>selected<% } %>>Medical Supplies</option>
-										<option value="phoneSims" <% if (Request[0].aidType === "phoneSims") { %>selected<% } %>>Phone SIMs</option>
-										<option value="shelter" <% if (Request[0].aidType === "shelter") { %>selected<% } %>>Shelter</option>
-									</select>
-								</div>
-
-								<div id="cf-submit">
-									<button type="submit" id="contact-submit" class="btn btn-lg btn-outline-danger" style="color: white; border-color: #50050d; background-color: #50050d;">Submit</button>
-								</div>
-	   
-							</form>
-					   </div>
-				   </div>
-				   <!-- /section title -->
-			   </div>
-			</div> <!-- end container -->
-		</section> <!-- end section -->
-		
-
-
-	<footer id="footer" class="bg-one">
-		<div class="top-footer">
-		  <div class="container">
-			<div class="row justify-content-around">
-			  <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-				<h3>about</h3>
-				<p>The richness of the history and culture of Palestine is still preserved today, this website showcases this beautiful history.</p>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-	  
-			  <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-				<ul>
-					<li>
-					  <h3>Quick Links</h3>
-					</li>
-					<li><a href="/about">About</a></li>
-					<li><a href="/palestine">Palestine</a></li>
-				  </ul>
-			</div>
-			  <!-- End of .col-sm-3 -->
-	  
-			  <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
-				<ul>
-					<li>
-					  <h3>Connect with the IS Department</h3>
-					</li>
-					<li><a href="https://marriott.byu.edu/infosys/">Marriott School Website</a></li>
-					<li><a href="https://marriott.byu.edu/infosys/admissions/bsis/admission-criteria/">Admissions Information</a></li>
-					<li><a href="https://ais.byu.edu/">AIS Webpage</a></li>
-				  </ul>
-			</div>
-			  <!-- End of .col-sm-3 -->
-	  
-			</div>
-		  </div> <!-- end container -->
-		</div>
-		<div class="footer-bottom">
-		  <h5>&copy; Copyright 2023. All rights reserved.</h5>
-		</div>
-	  </footer> <!-- end footer -->
-	  
-	  <% } 
-                
-	  else 
-        {%>         
-          <div class="cotn_principal">
-            <div class="align-items-center" style="padding-top: 180px; padding-left: 550px;">
-              <div class="content-wrapper full-page-wrapper d-flex">
-                <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
-                  <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
-                    <h3 class="card-title text-left mb-3" style="color: black;" >Please Login to see this Page</h3>
-                    
-                    <form action="/login" method="get">          
-                      <div class="text-center" >
-                        <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
-                      </div>
-                    </form>
-      
-                    <br>
-                      <form action="/" method="get">
-                      <div class="text-center" >
-                        <button type="submit" class="btn btn-primary btn-block enter-btn">Return to Home</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+  <!-- Section for editing an existing request -->
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- Title for editing request section -->
+        <div class="col-xl-6 col-lg-8">
+          <div class="title text-center">
+            <h2>Edit an Existing Request</h2>
+            <div class="border"></div>
+            <!-- Form for editing an existing request -->
+            <form id="contact-form" action="/saveEdits/<%= Request[0].formId %>" method="post" role="form">
+              <div class="form-group mb-4">
+                <input type="text" placeholder="Your First Name" class="form-control" name="firstName" id="firstName" value="<%= Request[0].firstName %>" required>
               </div>
-              <!-- content-wrapper ends -->
-            </div>
-            <!-- row ends -->
-          </div>
-          <!-- page-body-wrapper ends -->
-        
-            
-        <% }
-   %>
 
-<!-- end Footer Area
-========================================== -->
-<!-- 
-    Essential Scripts
+              <div class="form-group mb-4">
+                <input type="text" placeholder="Your Last Name" class="form-control" name="lastName" id="lastName" value="<%= Request[0].lastName %>" required>
+              </div>
+
+              <div class="form-group mb-4">
+                <input type="text" placeholder="Your City" class="form-control" name="city" id="city" value="<%= Request[0].city %>"required>
+              </div>
+
+              <div class="form-group mb-4">
+                <input type="text" placeholder="Your Phone Number" class="form-control" name="phone" id="phone=" value="<%= Request[0].phone %>" required>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="aidType">Type of Aid Needed:</label>
+                <select id="aidType" name="aidType" required>
+                  <option value="water" <% if (Request[0].aidType === "water") { %>selected<% } %>>Water</option>
+                  <option value="food" <% if (Request[0].aidType === "food") { %>selected<% } %>>Food</option>
+                  <option value="medicalSupplies" <% if (Request[0].aidType === "medicalSupplies") { %>selected<% } %>>Medical Supplies</option>
+                  <option value="phoneSims" <% if (Request[0].aidType === "phoneSims") { %>selected<% } %>>Phone SIMs</option>
+                  <option value="shelter" <% if (Request[0].aidType === "shelter") { %>selected<% } %>>Shelter</option>
+                </select>
+              </div>
+
+              <div id="cf-submit">
+                <button type="submit" id="contact-submit" class="btn btn-lg btn-outline-danger" style="color: white; border-color: #50050d; background-color: #50050d;">Submit</button>
+              </div>
+            </form>
+            <!-- End of form for editing an existing request -->
+          </div>
+        </div>
+        <!-- End of title for editing request section -->
+      </div>
+    </div> <!-- end container -->
+  </section> <!-- end section -->
+
+  <!-- Footer section -->
+  <footer id="footer" class="bg-one">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row justify-content-around">
+          <!-- About section -->
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <h3>about</h3>
+            <p>The richness of the history and culture of Palestine is still preserved today, this website showcases this beautiful history.</p>
+          </div>
+          <!-- End of .col-sm-3 -->
+
+          <!-- Quick Links section -->
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <ul>
+              <li>
+                <h3>Quick Links</h3>
+              </li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/palestine">Palestine</a></li>
+            </ul>
+          </div>
+          <!-- End of .col-sm-3 -->
+
+          <!-- Connect with the IS Department section -->
+          <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+            <ul>
+              <li>
+                <h3>Connect with the IS Department</h3>
+              </li>
+              <li><a href="https://marriott.byu.edu/infosys/">Marriott School Website</a></li>
+              <li><a href="https://marriott.byu.edu/infosys/admissions/bsis/admission-criteria/">Admissions Information</a></li>
+              <li><a href="https://ais.byu.edu/">AIS Webpage</a></li>
+            </ul>
+          </div>
+          <!-- End of .col-sm-3 -->
+        </div>
+      </div> <!-- end container -->
+    </div>
+    <div class="footer-bottom">
+      <!-- Copyright information -->
+      <h5>&copy; Copyright 2023. All rights reserved.</h5>
+    </div>
+  </footer> <!-- end footer -->
+
+<% } else { %>
+  <!-- Content for non-logged-in users -->
+  <div class="cotn_principal">
+    <div class="align-items-center" style="padding-top: 180px; padding-left: 550px;">
+      <div class="content-wrapper full-page-wrapper d-flex">
+        <div class="card col-lg-4 mx-auto" style="background-color: rgba(72, 1, 1, 0.897);">
+          <div class="cont_forms px-5 py-5" style="background-color: rgba(139, 88, 88, 0.897);" >
+            <!-- Login prompt -->
+            <h3 class="card-title text-left mb-3" style="color: black;" >Please Login to see this Page</h3>
+
+            <form action="/login" method="get">
+              <!-- Login button -->
+              <div class="text-center" >
+                <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+              </div>
+            </form>
+
+            <br>
+
+            <form action="/" method="get">
+              <!-- Return to Home button -->
+              <div class="text-center" >
+                <button type="submit" class="btn btn-primary btn-block enter-btn">Return to Home</button>
+              </div>
+            </form>
+            <!-- End of login prompt -->
+          </div>
+        </div>
+      </div>
+      <!-- Content wrapper ends -->
+    </div>
+    <!-- Row ends -->
+  </div>
+  <!-- Page body wrapper ends -->
+<% } %>
+
+<!-- Essential Scripts
     =====================================-->
 <!-- Main jQuery -->
 <script src="/plugins/jquery/jquery.min.js"></script>
@@ -271,15 +268,14 @@ Fixed Navigation
 <script src="/plugins/bootstrap/bootstrap.min.js"></script>
 <!-- Parallax -->
 <script src="/plugins/parallax/jquery.parallax-1.1.3.js"></script>
-<!-- lightbox -->
+<!-- Lightbox -->
 <script src="/plugins/lightbox2/js/lightbox.min.js"></script>
 <!-- Owl Carousel -->
 <script src="/plugins/slick/slick.min.js"></script>
-<!-- filter -->
+<!-- Filterizr -->
 <script src="/plugins/filterizr/jquery.filterizr.min.js"></script>
-<!-- Smooth Scroll js -->
+<!-- Smooth Scroll -->
 <script src="/plugins/smooth-scroll/smooth-scroll.min.js"></script>
-
 
 <!-- Custom js -->
 <script src="/js/script.js"></script>
